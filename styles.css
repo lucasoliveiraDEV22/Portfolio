@@ -12,7 +12,7 @@
     background-color: #1f1c1c;
     background-repeat: no-repeat;
     background-size: 900px;
-    background-position:center;
+    background-position: center;
 }
 
 nav {
@@ -21,7 +21,7 @@ nav {
     justify-content: space-between;
     padding-left: 30px;
     padding-right: 40px;
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .portfolio {
@@ -109,7 +109,7 @@ section div p {
 }
 
 section div button {
-    color: rgb(37, 5, 5);
+    /* color: rgb(37, 5, 5); */
     background: #110b39;
     height: 90px;
     width: 210px;
@@ -236,4 +236,147 @@ footer p {
 .social a:hover {
     transform: scale(1.3);
     transition: 0.5s;
+}
+
+@media screen and (max-width:720px) {
+    body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .caixa-principal {
+
+        background-size: 510px;
+        background-position: left;
+        padding-bottom: 20px;
+    }
+
+    nav {
+        padding-left: 15px;
+        padding-right: 20px;
+        padding-top: 10px;
+    }
+
+    .portfolio {
+        font-size: 35px;
+    }
+
+
+    ul {
+        margin-left: 60px;
+        justify-content: space-between;
+    }
+
+    li {
+        margin: 18px;
+    }
+
+    .link-menu {
+        font-size: 18px;
+    }
+
+    .meu-nome {
+        top: 75%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .meu-nome h3 {
+        font-size: 30px;
+    }
+
+    section {
+        display: block;
+        padding: 45px 10%;
+    }
+
+    #Lucas-image {
+        width: 260px;
+        height: 270px;
+        margin-left: 10%;
+    }
+
+    section div h2 {
+        font-size: 43px;
+    }
+
+    section div p {
+        font-size: 18px;
+    }
+
+    section div button {
+        height: 50px;
+        width: 170px;
+        font-size: 19px;
+        border-radius: 60px;
+    }
+
+    .Projetos {
+        padding-top: 30px;
+        padding-bottom: 96px;
+    }
+
+    .card {
+        width: 150px;
+        height: 239px;
+        padding: 15px 16px;
+    }
+
+    .Projetos h2 {
+        font-size: 35px;
+    }
+
+    .card img {
+        height: 27px;
+    }
+
+    .card h5 {
+        font-size: 13px;
+    }
+
+    .card p {
+        margin-top: 8px;
+        font-size: 10px;
+        margin-bottom: 11px;
+    }
+
+    .card a {
+        font-size: 8px;
+        border-radius: 27px;
+    }
+
+    .card-projects {
+        gap: 15px;
+        justify-content:center;
+    }
+
+    footer {
+        padding-top: 90px;
+    }
+
+    footer h5 {
+        font-size: 25px;
+    }
+
+    footer p {
+        margin-bottom: 20px;
+        margin-top: 11px;
+        font-size: 19px;
+    }
+
+    .social {
+        gap: 15px;
+    }
+
+    .social img {
+        height: 20px;
+    }
+
+    .social a {
+        border-radius: 47%;
+        height: 45px;
+        width: 45px;
+    }
 }
