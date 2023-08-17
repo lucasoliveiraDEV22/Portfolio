@@ -1,9 +1,25 @@
+::-webkit-scrollbar-track {
+    background-color: #141414;
+  }
+  ::-webkit-scrollbar {
+    width: 12px;
+    background: #F4F4F4;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2409d5;
+    border-radius: 20px;
+  }
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Josefin Sans', sans-serif;
 }
+
+
+  
 
 .caixa-principal {
     height: 100vh;
@@ -133,8 +149,8 @@ section div button:hover {
 
 .Projetos {
     background-color: #191919;
-    padding-top: 50px;
-    padding-bottom: 100px;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
 }
 
 .Projetos h2 {
@@ -145,27 +161,35 @@ section div button:hover {
 
 .card {
     background-color: #4a0808;
-    height: 395px;
+    height: 400px;
     width: 340px;
     border-radius: 20px;
     padding: 20px 35px;
     text-align: center;
+    box-shadow: white 10px 10px 20px;
 }
 
+.card:hover {
+    cursor: pointer;
+    box-shadow: white 0px 0px 15px 16px;
+    transform: scale(1.15);
+    transition: 0.6s;
+  }
+
 .card img {
-    height: 100px;
+    height: 5rem;
 }
 
 .card h5 {
     color: white;
-    font-size: 24px;
+    font-size: 2rem;
 }
 
 .card p {
     color: #d6d0e3;
-    margin-top: 10px;
-    font-size: 21px;
-    margin-bottom: 30px;
+    margin-top: 0.625rem;
+    font-size: 1.2rem;
+    margin-bottom: 1.8rem;
 }
 
 .card a {
@@ -186,8 +210,10 @@ section div button:hover {
 
 .card-projects {
     display: flex;
-    justify-content: space-around;
-    margin-top: 100px;
+    flex-wrap: wrap;
+    margin-top: 5rem;
+    justify-content: center;
+    gap: 2rem;
 }
 
 footer {
@@ -322,6 +348,7 @@ footer p {
         width: 150px;
         height: 239px;
         padding: 15px 16px;
+       
     }
 
     .Projetos h2 {
@@ -350,6 +377,7 @@ footer p {
     .card-projects {
         gap: 15px;
         justify-content:center;
+        
     }
 
     footer {
