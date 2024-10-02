@@ -30,36 +30,44 @@ html {
   --main-card-color: #4a0808;
   --main-nav-hover: #fcec13;
   --main-home-background: #22211d;
-  --scroll-progress: scroll;
+  /* --scroll-progress: scroll; */
 }
 
 body {
   width: 100%;
   height: 100vh;
+  overflow-x: hidden;
 }
-main,
+
+/* Oculta o conteúdo inicialmente e aplica o filtro blur */
+/* main,
 section,
 footer {
   opacity: 0;
-  filter: blur(5px);
   transform: translateX('-100%');
-  transition: all 1.5s;
+  transition: all 1.8s;
   overflow-x: hidden; 
-  scroll-timeline: var(--scroll-progress) 1s both;
-  scroll-timeline-axis: block;
-}
+} */
+
+/* Define a classe que será ativada quando o conteúdo estiver visível na tela */
 
 
-main.show,
+/* .show {
+  opacity: 1;
+  transform: translateX(0);
+} */
+
+
+/* main.show,
 section.show,
 footer.show {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
-}
+} */
 
-/* Adicionando as animações para os textos e cards */
-@keyframes slideInFromLeft {
+/*  Animação deslizante para os textos e cards */ 
+/* @keyframes slideInFromLeft {
   from {
     transform: translateX(-100%);
     opacity: 0;
@@ -68,28 +76,28 @@ footer.show {
     transform: translateX(0);
     opacity: 1;
   }
-}
+} */
 
 /* Aplicando a animação aos textos dentro das sections */
-section h2, 
+/* section h2, 
 section p,
 section button {
   opacity: 0;
   transform: translateX(-100%);
   animation: slideInFromLeft 1s forwards;
   animation-delay: 0.5s;
-}
+} */
 
 /* Aplicando a animação aos cards dentro das sections */
-section .card {
+/* section .card {
   opacity: 0;
   transform: translateX(-100%);
   animation: slideInFromLeft 1.2s forwards;
   animation-delay: 0.7s;
-}
+} */
 
 /* Controlar os delays dos textos e dos cards para aparecerem em sequência */
-section h2 {
+/* section h2 {
   animation-delay: 0.3s;
 }
 
@@ -121,7 +129,7 @@ section .card:nth-child(4) {
   opacity: 1;
   filter: blur(0);
   transform: translateX(0);
-}
+} */
 
 
 
@@ -284,6 +292,8 @@ header {
   padding-bottom: 5rem;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  
 }
 
 .Projetos h2 {
@@ -298,6 +308,8 @@ header {
   flex-wrap: wrap;
   margin-top: 5rem;
   gap: 2rem;
+  transition: transform 0.5s ease-out;
+  
 }
 
 .card {
