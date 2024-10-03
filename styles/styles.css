@@ -30,7 +30,6 @@ html {
   --main-card-color: #4a0808;
   --main-nav-hover: #fcec13;
   --main-home-background: #22211d;
-  /* --scroll-progress: scroll; */
 }
 
 body {
@@ -185,7 +184,6 @@ header {
 }
 
 
-
 .link-menu {
   text-decoration: none;
   color: white;
@@ -208,6 +206,7 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   box-shadow: inset 5px 5px 15px #f0f0af;
 }
 
@@ -293,7 +292,7 @@ header {
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  
+
 }
 
 .Projetos h2 {
@@ -308,8 +307,18 @@ header {
   flex-wrap: wrap;
   margin-top: 5rem;
   gap: 2rem;
-  transition: transform 0.5s ease-out;
-  
+ 
+}
+
+
+.card-right{
+  transform: translateX(400%);
+  transition: transform 0.4s ease;
+}
+
+.card-left{
+  transform: translateX(-400%);
+  transition: transform 0.4s ease;
 }
 
 .card {
@@ -320,6 +329,7 @@ header {
   padding: 10px;
   text-align: center;
   box-shadow: rgba(37, 231, 173, 0.2) 5px 7px 29px 0px;
+  
 }
 
 .card:hover {

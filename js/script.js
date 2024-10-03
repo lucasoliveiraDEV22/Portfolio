@@ -12,7 +12,6 @@
 
 // hiddenElements.forEach((el) => observer.observe(el));
 
-
 // document.addEventListener("DOMContentLoaded", function() {
 //   const elements = document.querySelectorAll("main, section, footer");
 
@@ -45,22 +44,39 @@
 //   document.querySelector(".cards-container").style.transform = `translateX(-${horizontalScroll}px)`;
 // });
 
+const boxes = document.querySelectorAll('.card-left, .card-right');
+
+window.addEventListener('scroll', checkBoxes);
+
+checkBoxes();
+
+function checkBoxes() {
+  const triggerBottom = (window.innerHeight / 5) * 4;
+  boxes.forEach((box) => {
+    const boxTop = box.getBoundingClientRect().top;
+    if (boxTop < triggerBottom) {
+      box.classList.add('show');
+    } else {
+      box.classList.remove('show');
+    }
+  });
+}
+
 // Mostra o botão quando o usuário rolar 20px para baixo
-window.onscroll = function() {
+window.onscroll = function () {
   scrollFunction();
 };
 
 function scrollFunction() {
-  const backToTopButton = document.getElementById("backToTop");
+  const backToTopButton = document.getElementById('backToTop');
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    backToTopButton.style.display = "block";
+    backToTopButton.style.display = 'block';
   } else {
-    backToTopButton.style.display = "none";
+    backToTopButton.style.display = 'none';
   }
 }
 
 // Rola suavemente para o topo quando o botão é clicado
-document.getElementById("backToTop").onclick = function() {
-  window.scrollTo({top: 0, behavior: 'smooth'});
+document.getElementById('backToTop').onclick = function () {
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-
