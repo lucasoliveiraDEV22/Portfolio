@@ -44,7 +44,7 @@
 //   document.querySelector(".cards-container").style.transform = `translateX(-${horizontalScroll}px)`;
 // });
 
-const boxes = document.querySelectorAll('.card-left, .card-right');
+const boxes = document.querySelectorAll('.about_text,.card-left, .card-right');
 
 window.addEventListener('scroll', checkBoxes);
 
