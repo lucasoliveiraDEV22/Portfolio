@@ -15,163 +15,265 @@
     <title>Lucas Rones dos Anjos Oliveira</title>
   </head>
   <body>
-    <header class="caixa-principal" >
+    <header class="caixa-principal">
       <nav id="menu-list">
-        <h2 class="portfolio">Meu Portfo<span>lio</span></h2>
+        <h2 class="portfolio">Portfo<span>lio</span></h2>
         <ul id="menu-list">
           <li><a class="link-menu" href="#home">Home</a></li>
           <li><a class="link-menu" href="#sobre">Sobre</a></li>
           <li><a class="link-menu" href="#hobbies">Hobbies</a></li>
           <li><a class="link-menu" href="#Skills">Skills</a></li>
           <li><a class="link-menu" href="#projetos-id">Projetos</a></li>
-          <li><a class="link-menu" href="#fale-comigo">Fale comigo</a></li>
+          <li><a class="link-menu" href="#fale-comigo">Contato</a></li>
         </ul>
       </nav>
     </header>
-<main>
-    <section class="meu_nome" id="home">
-      <div class="class_home">
-        <h1 id="first_title">Lucas <span>Rones</span></h1>
-        <br />
-        <h3>Desenvolvedor Web</h3>
-      </div>
-    </section>
-    <section class="about" id="sobre">
-      <img
-        src="./img/lucas-oliveira.jpg"
-        alt="Lucas-photograph"
-        id="Lucas-image"
-      />
-      <div class="about_text">
-        <h2>Sobre mim</h2>
-        <p>
-          Sou desenvolvedor web com foco em JavaScript, especializado em React,
-          Node.js e TypeScript. Tenho experiência na criação de aplicações
-          modernas e escaláveis, utilizando tecnologias como HTML5, CSS3,
-          GitHub, além de trabalhar com ferramentas e metodologias atuais para
-          entregar soluções robustas e eficientes.
-        </p>
-        <button>
-          <a class="link-button" href="#fale-comigo">Entre em contato</a>
-        </button>
-      </div>
-    </section>
+    <main>
+      <section class="meu_nome" id="home">
+        <div class="class_home">
+          <h1 id="first_title">Lucas <span>Rones</span></h1>
+          <br />
+          <h3>Desenvolvedor Web</h3>
+        </div>
+      </section>
+      <section class="about" id="sobre">
+        <img
+          src="./img/lucas-oliveira.jpg"
+          alt="Lucas-photograph"
+          id="Lucas-image"
+        />
+        <div class="about_text">
+          <h2>Sobre:</h2>
+          <p>
+            Sou desenvolvedor web com foco em JavaScript, especializado em
+            React, Node.js e TypeScript. Tenho experiência na criação de
+            aplicações modernas e escaláveis, utilizando tecnologias como HTML5,
+            CSS3, GitHub, além de trabalhar com ferramentas e metodologias
+            atuais para entregar soluções robustas e eficientes.
+          </p>
+          <button id="contact">
+            <a class="link-button" href="#fale-comigo">Entre em contato</a>
+          </button>
+        </div>
+      </section>
+      <section class="hobbies">
+        <h2>Meus hobbies</h2>
+        <p>Como curiosidade sobre minhas atividades no meu tempo livre, eu faço questão de mencionar que eu gosto muito de ouvir e tocar música, gosto de ler, de assistir jogo de futebol e gosto de assistir palestras ou filmes de ficção, aventura e superação.</p>
+        <div class="first-carousel">
+          <ul class="slider">
+            <li>
+              <input type="radio" id="slide1" name="slide" checked />
+              <label for="slide1"></label>
+              <img src="./assets/camera-seguranca.jpg" />
+            </li>
+            <li>
+              <input type="radio" id="slide2" name="slide" />
+              <label for="slide2"></label>
+              <img src="./assets/alarm.jpg" />
+            </li>
+            <li>
+              <input type="radio" id="slide3" name="slide" />
+              <label for="slide3"></label>
+              <img src="./assets/interfone.png" />
+            </li>
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+          </ul>
+        </div>
+      </section>
 
-    <section class="Projetos" id="projetos-id">
-      <h2>Principais Projetos</h2>
-      <div class="card-projects">
-        <div class="card-right">
-        <div class="card">
-          <img
-            src="./img/Intagram-icon.webp"
-            alt="instagram-image"
-            class="image-project"
-          />
-          <h5>Instagram</h5>
-          <p>
-            O objetivo desse projeto foi replicar uma interface de página de
-            login do Instagram, com o intuito de deixá-la dinâmica e acessível.
-          </p>
-          <a
-            href="https://lucasoliveiradev22.github.io/MPDZ-Setembro-Instagram/"
-            target="_blank"
-            >Ver Projeto</a
-          >
+      <section class="Projetos" id="projetos-id">
+        <h2>Principais Projetos</h2>
+        <div class="card-projects">
+          <div class="card-right">
+            <div class="card">
+              <img
+                src="./img/Intagram-icon.webp"
+                alt="instagram-image"
+                class="image-project"
+              />
+              <h5>Instagram</h5>
+              <p>
+                O objetivo desse projeto foi replicar uma interface de página de
+                login do Instagram, com o intuito de deixá-la dinâmica e
+                acessível.
+              </p>
+              <a href="https://projectinstadev.netlify.app/" target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+            <div class="card">
+              <img
+                src="./img/starbucks.png"
+                alt="starbucks-image"
+                class="image-project"
+              />
+              <h5>Starbucks</h5>
+              <p>
+                A aplicação "Starbucks" baseou-se na escolha de tipos de café,
+                especificados pelas cores de fundo: verde, rosa claro e rosa
+                escuro.
+              </p>
+              <a href="https://starcafe-website.netlify.app/" target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+            <div class="card">
+              <img
+                src="./img/EUA-Europe.jpg"
+                alt="conversor-moedas-image"
+                class="image-project"
+              />
+              <h5>Conversor de Moedas</h5>
+              <p>
+                O objetivo do projeto foi elaborar um conversor de moedas, a
+                partir de um padrão usado pelo Figma, com a ideia de converter
+                de reais para: dólar, euro e bitcoin.
+              </p>
+              <a
+                href="https://currency-new-converter.netlify.app/"
+                target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+          </div>
+          <div class="card-left">
+            <div class="card">
+              <img
+                src="./img/thumbnail-cadastro.jpg"
+                alt="cadastro-usuarios"
+                class="image-project"
+              />
+              <h5>Cadastro de Usuários</h5>
+              <p>
+                Projeto Cadastro de Usuários - Foram utilizadas as tecnologias
+                ReactJS, NodeJS, além das ferramentas e frameworks: Vite,
+                React-Router-Dom 6, AXIOS e hooks useState, useRef e useEffect;
+                design do Figma.
+              </p>
+              <a
+                href="https://cadastronovosusuarios.netlify.app/"
+                target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+            <div class="card">
+              <img
+                src="./img/to-do.PNG"
+                alt="to-do-list"
+                class="image-project"
+              />
+              <h5>Lista de tarefas</h5>
+              <p>
+                Projeto Lista de Tarefas: foi elaborado com o objetivo de
+                escrever uma ou mais tarefas no input "o que você vai fazer?"
+                que podemos estabelecer no dia-a-dia e, com isso podemos editar
+                e remover as tarefas assim que decidirmos removê-las.
+              </p>
+              <a href="https://newtasks.netlify.app/" target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+            <div class="card">
+              <img src="./img/tacseg.jpg" alt="" />
+              <h5>TacSeg Alarmes</h5>
+              <p>
+                Esta aplicação foi realizada para a empresa de segurança
+                eletrônica TacSeg Alarmes, na qual apresenta elementos
+                interativos como carrosseis, botões de contato com efeito e
+                formulário para contato.
+              </p>
+              <a href="https://tacseg.netlify.app/" target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+          </div>
+          <div class="card-right">
+            <div class="card">
+              <img src="./img/actual-printer.PNG" alt="" />
+              <h5>Actual Printer</h5>
+              <p>
+                Projeto elaborado para a empresa de papelaria Actual Printer, na
+                qual havia a demanda para construção de um website para seus
+                clientes entrarem em contato com os responsáveis. Esta aplicação
+                foi elaborada com ReactJS, material UI e Google Key API.
+              </p>
+              <a href="https://www.actualprinter.com.br/" target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+            <div class="card">
+              <img src="./img/thumbnail alura.PNG" alt="" />
+              <h5>Encriptador</h5>
+              <p>
+                O objetivo desta aplicação é criptografar uma palavra em que
+                seja possível escrever no campo de texto da esquerda e, após
+                isso, que eu consiga copiar a palavra criptografa e
+                descriptografá-la novamente. Ex:"gato" => "gaitober" e
+                "gaitober" => "gato".
+              </p>
+              <a
+                href="https://projeto-decodificador-theta.vercel.app/"
+                target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+            <div class="card">
+              <img src="./img/fit-project.PNG" alt="" />
+              <h5>Fit-Project</h5>
+              <p>
+                A "Fit-Project" é um website interativo em UX (experiência do
+                usuário), e nada mais é do que uma página de
+                cafeteria/restaurante fitness para que as pessoas consigam
+                acessar e visualizar os produtos e consigam entrar em contato
+                também.
+              </p>
+              <a href="https://devlucas.hatch.one/fit-projetc" target="_blank"
+                >Ver Projeto</a
+              >
+            </div>
+          </div>
         </div>
-        <div class="card">
-          <img
-            src="./img/starbucks.png"
-            alt="starbucks-image"
-            class="image-project"
-          />
-          <h5>Starbucks</h5>
-          <p>
-            A aplicação "Starbucks" baseou-se na escolha de tipos de café,
-            especificados pelas cores de fundo: verde, rosa claro e rosa escuro.
-          </p>
-          <a
-            href="https://lucasoliveiradev22.github.io/Starbucks-MPDZ/"
-            target="_blank"
-            >Ver Projeto</a
-          >
-        </div>
-        <div class="card">
-          <img
-            src="./img/EUA-Europe.jpg"
-            alt="conversor-moedas-image"
-            class="image-project"
-          />
-          <h5>Conversor de Moedas</h5>
-          <p>
-            O objetivo do projeto foi elaborar um conversor de moedas, a partir
-            de uma padrão do Figma, com a ideia de covnerter de reais para:
-            dólar, euro e bitcoin.
-          </p>
-          <a
-            href="https://lucasoliveiradev22.github.io/Projeto-Conversor-de-Moedas/"
-            target="_blank"
-            >Ver Projeto</a
-          >
-        </div>
-      </div>
-      <div class="card-left">
-        <div class="card">
-          <img
-            src="./img/thumbnail-cadastro.jpg"
-            alt="cadastro-usuarios"
-            class="image-project"
-          />
-          <h5>Cadastro de Usuários</h5>
-          <p>
-            Projeto Cadastro de Usuários - Foram utilizadas as tecnologias
-            ReactJS, NodeJS, além das ferramentas e frameworks: Vite,
-            React-Router-Dom 6, AXIOS e hooks useState, useRef e useEffect;
-            design do Figma.
-          </p>
-          <a href="https://cadastronovosusuarios.netlify.app/" target="_blank"
-            >Ver Projeto</a
-          >
-        </div>
-        <div class="card">
-          <img
-            src="./img/to do list.jpg"
-            alt="to-do-list"
-            class="image-project"
-          />
-          <h5>Lista de tarefas</h5>
-          <p>
-            Projeto Lista de Tarefas: foi elaborado com a ideia de adicionar uma
-            lista de tarefas, através de input, div e button e, o objetivo
-            principal é escrever e clicar no botão para uma nova tarefa ser
-            adicionada e, quando uma tarefa for removida, o botão de deletar
-            será clicado.
-          </p>
-          <a href="https://to-to-list-tasks.netlify.app/" target="_blank"
-            >Ver Projeto</a
-          >
-        </div>
-      </div>
-      </div>
-    </section>
-  </main>
+      </section>
+    </main>
     <footer id="fale-comigo">
-      <h5>Lucas Rones dos Anjos Oliveira</h5>
-      <p id="fale-comigo">Para mais informações</p>
-      <div class="social">
-        <a href="tel:+5541999332332" target="_blank"
-          ><img src="./img/telefone.png" alt="telephone-image"
-        /></a>
-        <a
-          href="https://www.linkedin.com/in/lucas-rones/"
-          target="_blank"
-          ><img src="./img/linkedin.png" alt="linkedin-image"
-        /></a>
-        <a href="https://github.com/lucasoliveiraDEV22" target="_blank"
-          ><img src="./img/github.png" alt="github-image"
-        /></a>
-        <a href="https://wa.me/5541999332332" target="_blank"
-          ><img src="./img/whatsapp-icone.png" alt="whatsapp-image"
-        /></a>
+      <div class="form-container">
+        <div class="form-image">
+          <img src="./img/form-contact.png" alt="" id="form-contact"/>
+          <form
+            action="https://formsubmit.co/ajax/lucaszrones@gmail.com"
+            method="POST"
+            data-form
+          >
+            <label for="name">Seu nome</label>
+            <input type="text" id="name" name="name" required />
+
+            <label for="email">Seu e-mail</label>
+            <input type="email" id="email" name="email" required />
+
+            <label for="message">Sua mensagem</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <button type="submit" data-button>Enviar</button>
+          </form>
+        </div>
+        </div>
+        <h5>Lucas Rones dos Anjos Oliveira</h5>
+        <p id="fale-comigo">Para mais informações</p>
+        <div class="social">
+          <a href="tel:+5541999332332" target="_blank"
+            ><img src="./img/telefone.png" alt="telephone-image"
+          /></a>
+          <a href="https://www.linkedin.com/in/lucas-rones/" target="_blank"
+            ><img src="./img/linkedin.png" alt="linkedin-image"
+          /></a>
+          <a href="https://github.com/lucasoliveiraDEV22" target="_blank"
+            ><img src="./img/github.png" alt="github-image"
+          /></a>
+          <a href="https://wa.me/5541999332332" target="_blank"
+            ><img src="./img/whatsapp-icone.png" alt="whatsapp-image"
+          /></a>
+        
       </div>
     </footer>
     <button id="backToTop" title="Voltar ao topo">↑</button>

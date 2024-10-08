@@ -30,7 +30,7 @@ html {
   --main-card-color: #4a0808;
   --main-nav-hover: #fcec13;
   --main-home-background: #22211d;
-  
+  --font-first-section: #f9f4e3;
 }
 
 body {
@@ -152,7 +152,7 @@ nav {
 }
 
 .portfolio span {
-  color: #2f3ebf;
+  color: #bf2f2f;
 }
 
 li {
@@ -206,14 +206,40 @@ header {
   box-shadow: inset 5px 5px 15px #f0f0af;
 }
 
+.meu_nome h3 {
+  color: white;
+  font-size: 40px;
+}
+
+.class_home {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  background-color: var(--main-home-background);
+  width: 60%;
+  height: 60%;
+  text-align: center;
+  border-radius: 10%;
+  border: 5px dashed #0da3a3;
+  z-index: 1;
+  overflow: hidden; /* Garante que os pseudoelementos não transbordem */
+}
+
 .class_home::before,
-.meu-nome::after {
+.class_home::after {
   content: '';
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  top: 0;
+  left: 0;
   position: absolute;
-  z-index: -1;
-  width: calc(100% + 30px);
-  height: calc(100% + 30px);
-  background-color: linear-gradient(
+  z-index: -1; /* Gradiente ficará atrás da div */
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  background: linear-gradient(
     45deg,
     #ffff00,
     #00ff00,
@@ -221,32 +247,35 @@ header {
     #001aff,
     #a200ff,
     #ff0055,
-    #ff0000
+    #ff0000,
+    #ffff00,
+    #00ff00,
+    #0099ff,
+    #001aff,
+    #a200ff
   );
+  background-size: 500%;
+  border-radius: 8px;
+  animation: AnimarBorda 8s linear alternate infinite;
 }
 
-.meu_nome h3 {
-  color: white;
-  font-size: 40px;
-}
-
-.class_home {
-  background-color: var(--main-home-background);
-  width: 60%;
-  height: 60%;
-  text-align: center;
-  border-radius: 10%;
-  border: 25px double #0da3a3;
+@keyframes AnimarBorda{
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 100%;
+  }
 }
 
 #first_title {
-  color: white;
+  color: var(--font-first-section);
   font-size: 70px;
   text-align: center;
 }
 
 #first_title span {
-  color: #2f3ebf;
+  color: rgb(156, 19, 19);
 }
 
 .about {
@@ -254,6 +283,10 @@ header {
   align-items: center;
   padding: 60px 15%;
   background-color: #000000;
+}
+
+.about div {
+  text-shadow: 3px 7px 12px rgb(151, 15, 15);
 }
 
 .about div h2 {
@@ -286,7 +319,7 @@ header {
 
 .about_text {
   transform: translateX(400%);
-  transition: transform 6s ease;
+  transition: transform 4s ease;
 }
 
 .about_text:nth-of-type(even) {
@@ -309,6 +342,36 @@ header {
   text-decoration: none;
   font-weight: 500;
   color: #fff9f9f8;
+}
+
+#contact:hover{
+  background-color:rgba(50, 192, 7, 0.952);
+  box-shadow: 5px 9px 10px #926c19;
+}
+
+.about-text{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.hobbies{
+  padding: 60px 15%;
+  background-color: #191919;
+}
+
+.hobbies h2{
+  color: white;
+  font-size: 75px;
+  text-align: center;
+}
+
+.hobbies p{
+  color: white;
+  font-size: 1.3rem;
+  margin-top: 35px;
+  margin-bottom: 60px;
+  text-align: start;
 }
 
 .Projetos {
@@ -412,6 +475,67 @@ header {
   border: 2px solid #f9004d;
 }
 
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: #3d0508;
+  color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 40px;
+}
+.form-container input,
+.form-container textarea,
+.form-container button {
+  outline: none;
+  width: 100%;
+  padding: 0.8rem;
+  margin: 0.5rem 0;
+  border: 0.125rem solid transparent;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  border-radius: 5px;
+}
+.form-container input:hover,
+.form-container input:focus,
+.form-container textarea:hover,
+.form-container textarea:focus {
+  outline: none;
+  border-color: #0c497e;
+  box-shadow: 0 0 0 0.25rem #26344a;
+}
+
+.form-container button {
+  background-color: #0f6917;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+.form-container button:hover {
+  background-color: #0056b3;
+}
+
+.form-container button:disabled {
+  cursor: not-allowed;
+  background: #555b69;
+}
+
+.form-image{
+  display:flex;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+#form-contact{
+  max-width: 280px;
+  max-height: 280px;
+  border-radius: 2%;
+}
+
+
 footer {
   background-color: #000000;
   padding-top: 100px;
@@ -466,19 +590,19 @@ footer p {
   bottom: 20px; /* Posiciona o botão a 20px do fundo da tela */
   right: 30px; /* Posiciona o botão a 30px da direita da tela */
   z-index: 99; /* Garante que o botão esteja na frente de outros elementos */
-  font-size: 25px; /* Tamanho da fonte */
-  background-color: #00c16c; /* Cor de fundo */
+  font-size: 50px; /* Tamanho da fonte */
+  background-color: #3300c1; /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Sem bordas */
   outline: none; /* Sem contorno */
   cursor: pointer; /* Cursor de clique */
   padding: 25px; /* Espaçamento interno */
   border-radius: 10px; /* Bordas arredondadas */
-  transition: background-color 0.3s; /* Transição suave para mudança de cor */
+  transition: background-color 1s; /* Transição suave para mudança de cor */
 }
 
 #backToTop:hover {
-  background-color: #555; /* Muda a cor de fundo ao passar o mouse */
+  background-color: #1f8017; /* Muda a cor de fundo ao passar o mouse */
 }
 
 @media screen and (max-width: 720px) {
