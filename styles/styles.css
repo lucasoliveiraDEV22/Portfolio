@@ -259,7 +259,7 @@ header {
   animation: AnimarBorda 8s linear alternate infinite;
 }
 
-@keyframes AnimarBorda{
+@keyframes AnimarBorda {
   0% {
     background-position: 0%;
   }
@@ -344,34 +344,129 @@ header {
   color: #fff9f9f8;
 }
 
-#contact:hover{
-  background-color:rgba(50, 192, 7, 0.952);
+#contact:hover {
+  background-color: rgba(50, 192, 7, 0.952);
   box-shadow: 5px 9px 10px #926c19;
 }
 
-.about-text{
+.about-text {
   display: flex;
   flex-direction: column;
   height: 100vh;
 }
 
-.hobbies{
+.hobbies {
   padding: 60px 15%;
   background-color: #191919;
 }
 
-.hobbies h2{
+.hobbies h2 {
   color: white;
   font-size: 75px;
   text-align: center;
 }
 
-.hobbies p{
+.hobbies p {
   color: white;
   font-size: 1.3rem;
   margin-top: 35px;
   margin-bottom: 60px;
   text-align: start;
+}
+
+.slider {
+  display: block;
+  height: 310px;
+  max-width: 500px;
+  margin: auto;
+  margin-top: 30px;
+  position: relative;
+}
+
+.slider input {
+  display: none;
+}
+
+.slider li {
+  list-style: none;
+  position: absolute;
+}
+
+.slider img {
+  margin: auto;
+  height: 100%;
+  width: 100%;
+  vertical-align: top;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.img_carousel {
+  width: 600px;
+  height: 600px;
+}
+
+.slider li input:checked ~ img {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+  transition: 1.5s;
+}
+
+.slider label {
+  background-color: none;
+  bottom: 10px;
+  cursor: pointer;
+  display: block;
+  height: 10px;
+  position: absolute;
+  width: 10px;
+  z-index: 10;
+}
+
+.slider li:nth-child(1) label {
+  left: 10px;
+}
+
+.slider li:nth-child(2) label {
+  left: 40px;
+  top: 313px;
+}
+
+.slider li:nth-child(3) label {
+  left: 70px;
+  top: 313px;
+}
+
+button.prev,
+button.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: rgb(46, 74, 199);
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+button.prev {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+button.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+button.prev:hover,
+button.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .Projetos {
@@ -475,7 +570,6 @@ header {
   border: 2px solid #f9004d;
 }
 
-
 .form-container {
   display: flex;
   flex-direction: column;
@@ -523,18 +617,17 @@ header {
   background: #555b69;
 }
 
-.form-image{
-  display:flex;
+.form-image {
+  display: flex;
   justify-content: space-between;
   gap: 2.5rem;
 }
 
-#form-contact{
+#form-contact {
   max-width: 280px;
   max-height: 280px;
   border-radius: 2%;
 }
-
 
 footer {
   background-color: #000000;
