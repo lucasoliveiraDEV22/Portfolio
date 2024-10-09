@@ -39,95 +39,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Oculta o conteúdo inicialmente e aplica o filtro blur */
-/* main,
-section,
-footer {
-  opacity: 0;
-  transform: translateX('-100%');
-  transition: all 1.8s;
-  overflow-x: hidden; 
-} */
-
-/* Define a classe que será ativada quando o conteúdo estiver visível na tela */
-
-/* .show {
-  opacity: 1;
-  transform: translateX(0);
-} */
-
-/* main.show,
-section.show,
-footer.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-} */
-
-/*  Animação deslizante para os textos e cards */
-/* @keyframes slideInFromLeft {
-  from {
-    transform: translateX(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateX(0);
-    opacity: 1;
-  }
-} */
-
-/* Aplicando a animação aos textos dentro das sections */
-/* section h2, 
-section p,
-section button {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInFromLeft 1s forwards;
-  animation-delay: 0.5s;
-} */
-
-/* Aplicando a animação aos cards dentro das sections */
-/* section .card {
-  opacity: 0;
-  transform: translateX(-100%);
-  animation: slideInFromLeft 1.2s forwards;
-  animation-delay: 0.7s;
-} */
-
-/* Controlar os delays dos textos e dos cards para aparecerem em sequência */
-/* section h2 {
-  animation-delay: 0.3s;
-}
-
-section p {
-  animation-delay: 0.5s;
-}
-
-section button {
-  animation-delay: 0.7s;
-}
-
-section .card:nth-child(1) {
-  animation-delay: 0.9s;
-}
-
-section .card:nth-child(2) {
-  animation-delay: 1.1s;
-}
-
-section .card:nth-child(3) {
-  animation-delay: 1.3s;
-}
-
-section .card:nth-child(4) {
-  animation-delay: 1.5s;
-}
-
-.show {
-  opacity: 1;
-  filter: blur(0);
-  transform: translateX(0);
-} */
 
 .caixa-principal {
   width: 100%;
@@ -377,7 +288,7 @@ header {
 .slider {
   display: block;
   height: 310px;
-  max-width: 500px;
+  max-width: 400px;
   margin: auto;
   margin-top: 30px;
   position: relative;
@@ -393,17 +304,16 @@ header {
 }
 
 .slider img {
-  margin: auto;
-  height: 100%;
   width: 100%;
+  height: 100%;
   vertical-align: top;
   opacity: 0;
-  visibility: hidden;
 }
 
-.img_carousel {
-  width: 600px;
-  height: 600px;
+
+
+.video_music {
+  width: 100%;
 }
 
 .slider li input:checked ~ img {
@@ -445,7 +355,7 @@ button.next {
   top: 50%;
   width: auto;
   padding: 16px;
-  margin-top: -22px;
+  /* margin-top: -22px; */
   color: rgb(46, 74, 199);
   font-weight: bold;
   font-size: 18px;
