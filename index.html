@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
+    <link rel="stylesheet" href="styles-1.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
     <script src="js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,6 +14,12 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,600;1,600&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+ 
     <title>Lucas Rones dos Anjos Oliveira</title>
   </head>
   <body>
@@ -58,38 +66,48 @@
       </section>
       <section class="hobbies">
         <h2>Meus hobbies</h2>
-        <p>Como curiosidade sobre minhas atividades no meu tempo livre, eu faço questão de mencionar que eu gosto muito de ouvir e tocar música, gosto de ler, de assistir jogo de futebol e gosto de assistir palestras ou filmes de ficção, aventura e superação.</p>
-        <div class="first-carousel">
-          <ul class="slider">
-            <li>
-              <input type="radio" id="slide1" name="slide" checked />
-              <label for="slide1"></label>
-            
-                <video loop autoplay muted width="280" >
-                  <source src="./videos/Intro de futebol - Animação 2020.webm" class="video_music">
-                </video>
-             
-            </li>
-            <li>
-              <input type="radio" id="slide2" name="slide" />
-              <label for="slide2"></label>
-              <img src="./img/violão.jpg" class="img_carousel"/>
-              <audio src="./audio/Bag Man from Yankton - National Sweetheart.mp3"></audio>
-            </li>
-            <li>
-              <input type="radio" id="slide3" name="slide" />
-              <label for="slide3"></label>
-              <img src="./img/segredo.png" />
-            </li>
-            <li>
-              <input type="radio" id="slide4" name="slide" />
-              <label for="slide4"></label>
-              <img src="./img/filme-superação.jpeg" />
-            </li>
-            <button class="prev" onclick="prevSlide()">&#10094;</button>
-            <button class="next" onclick="nextSlide()">&#10095;</button>
-          </ul>
+        <p>
+          Como curiosidade sobre minhas atividades no meu tempo livre, eu faço
+          questão de mencionar que eu gosto muito de ouvir e tocar música, gosto
+          de ler, de assistir jogo de futebol e gosto de assistir palestras ou
+          filmes de ficção, aventura e superação.
+        </p>
+        <div class="slider">
+          <div class="slides">
+            <!-- RADIO BUTTONS -->
+             <input type="radio" id="radio-1" name="radio-btn" />
+             <input type="radio" id="radio-2" name="radio-btn" />
+             <input type="radio" id="radio-3" name="radio-btn" />
+             <input type="radio" id="radio-4" name="radio-btn" />
+
+          </div>
         </div>
+        <!-- <div class="swiper">
+          <div class="swiper-wraper">
+            <div class="swiper-slide">
+              <div class="project-img">
+                <img src="./img/segredo.png" alt="Foto 01" class="foto">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-img">
+                <img src="./img/violão.jpg" alt="Foto 02" class="foto">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="project-img">
+                <img src="./img/filme-superação.jpeg" alt="Foto 03" class="foto">
+              </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="project-img">
+              <img src="./img/Portfolio (pronto).JPG" alt="Foto 04" class="foto">
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        </div> -->
+        
       </section>
 
       <section class="Projetos" id="projetos-id">
@@ -249,7 +267,7 @@
     <footer id="fale-comigo">
       <div class="form-container">
         <div class="form-image">
-          <img src="./img/form-contact.png" alt="" id="form-contact"/>
+          <img src="./img/form-contact.png" alt="" id="form-contact" />
           <form
             action="https://formsubmit.co/ajax/lucaszrones@gmail.com"
             method="POST"
@@ -267,23 +285,22 @@
             <button type="submit" data-button>Enviar</button>
           </form>
         </div>
-        </div>
-        <h5>Lucas Rones dos Anjos Oliveira</h5>
-        <p id="fale-comigo">Para mais informações</p>
-        <div class="social">
-          <a href="tel:+5541999332332" target="_blank"
-            ><img src="./img/telefone.png" alt="telephone-image"
-          /></a>
-          <a href="https://www.linkedin.com/in/lucas-rones/" target="_blank"
-            ><img src="./img/linkedin.png" alt="linkedin-image"
-          /></a>
-          <a href="https://github.com/lucasoliveiraDEV22" target="_blank"
-            ><img src="./img/github.png" alt="github-image"
-          /></a>
-          <a href="https://wa.me/5541999332332" target="_blank"
-            ><img src="./img/whatsapp-icone.png" alt="whatsapp-image"
-          /></a>
-        
+      </div>
+      <h5>Lucas Rones dos Anjos Oliveira</h5>
+      <p id="fale-comigo">Para mais informações</p>
+      <div class="social">
+        <a href="tel:+5541999332332" target="_blank"
+          ><img src="./img/telefone.png" alt="telephone-image"
+        /></a>
+        <a href="https://www.linkedin.com/in/lucas-rones/" target="_blank"
+          ><img src="./img/linkedin.png" alt="linkedin-image"
+        /></a>
+        <a href="https://github.com/lucasoliveiraDEV22" target="_blank"
+          ><img src="./img/github.png" alt="github-image"
+        /></a>
+        <a href="https://wa.me/5541999332332" target="_blank"
+          ><img src="./img/whatsapp-icone.png" alt="whatsapp-image"
+        /></a>
       </div>
     </footer>
     <button id="backToTop" title="Voltar ao topo">↑</button>
