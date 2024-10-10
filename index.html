@@ -5,8 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
-    <link rel="stylesheet" href="styles-1.css">
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+    <link rel="stylesheet" href="styles/styles-1.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+      defer
+    ></script>
     <script src="js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,7 +22,6 @@
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
 
- 
     <title>Lucas Rones dos Anjos Oliveira</title>
   </head>
   <body>
@@ -64,51 +66,65 @@
           </button>
         </div>
       </section>
-      <section class="hobbies">
-        <h2>Meus hobbies</h2>
-        <p>
-          Como curiosidade sobre minhas atividades no meu tempo livre, eu faço
-          questão de mencionar que eu gosto muito de ouvir e tocar música, gosto
-          de ler, de assistir jogo de futebol e gosto de assistir palestras ou
-          filmes de ficção, aventura e superação.
-        </p>
+      <section class="hobbies" id="hobbies">
+        <div class="hobbies-class">
+          <h2>Meus hobbies</h2>
+          <p>
+            Como curiosidade sobre minhas atividades no meu tempo livre, eu faço
+            questão de mencionar que eu gosto muito de ouvir e tocar música,
+            gosto de ler, de assistir jogo de futebol e gosto de assistir
+            palestras ou filmes de ficção, aventura e superação.
+          </p>
+        </div>
         <div class="slider">
           <div class="slides">
             <!-- RADIO BUTTONS -->
-             <input type="radio" id="radio-1" name="radio-btn" />
-             <input type="radio" id="radio-2" name="radio-btn" />
-             <input type="radio" id="radio-3" name="radio-btn" />
-             <input type="radio" id="radio-4" name="radio-btn" />
+            <input type="radio" id="radio1" name="radio-btn" />
+            <input type="radio" id="radio2" name="radio-btn" />
+            <input type="radio" id="radio3" name="radio-btn" />
+            <input type="radio" id="radio4" name="radio-btn" />
 
+            <div class="slide first">
+              <img src="./img/real_soccer_ball.svg" alt="soccer-ball" />
+            </div>
+            <div class="slide">
+              <img src="./img/capa-de-livro-book.svg" alt="book-img" />
+            </div>
+            <div class="slide">
+              <img src="./img/filme-superação.jpeg" alt="movie-img" />
+            </div>
+            <div class="slide">
+              <img src="./img/capa-de-livro-book.svg" alt="book-img" />
+            </div>
+            <!-- FIM SLIDE IMAGES -->
+
+            <!-- Navigation Auto -->
+            <div class="navigation-auto">
+              <div class="auto-btn1"></div>
+              <div class="auto-btn2"></div>
+              <div class="auto-btn3"></div>
+              <div class="auto-btn4"></div>
+            </div>
+          </div>
+          <div class="manual-navigation">
+            <label for="radio1" class="manual-btn"></label>
+            <label for="radio2" class="manual-btn"></label>
+            <label for="radio3" class="manual-btn"></label>
+            <label for="radio4" class="manual-btn"></label>
           </div>
         </div>
-        <!-- <div class="swiper">
-          <div class="swiper-wraper">
-            <div class="swiper-slide">
-              <div class="project-img">
-                <img src="./img/segredo.png" alt="Foto 01" class="foto">
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="project-img">
-                <img src="./img/violão.jpg" alt="Foto 02" class="foto">
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="project-img">
-                <img src="./img/filme-superação.jpeg" alt="Foto 03" class="foto">
-              </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="project-img">
-              <img src="./img/Portfolio (pronto).JPG" alt="Foto 04" class="foto">
-            </div>
-        </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
-        </div> -->
-        
       </section>
+      <!-- <section class="skills">
+        <h2>Skills</h2>
+        <!-- <div class="skill-cards">
+          <div class="skill-figure"></div>
+          <div class="skill-figure"></div>
+          <div class="skill-figure"></div>
+          <div class="skill-figure"></div>
+          <div class="skill-figure"></div>
+          <div class="skill-figure"></div>
+        </div> -->
+      <!-- </section>  -->
 
       <section class="Projetos" id="projetos-id">
         <h2>Principais Projetos</h2>

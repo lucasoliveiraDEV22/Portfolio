@@ -267,9 +267,19 @@ header {
 }
 
 .hobbies {
-  padding: 60px 15%;
+  padding: 70px 15%;
   background-color: #191919;
- 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.hobbies-class{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .hobbies h2 {
@@ -285,6 +295,14 @@ header {
   margin-bottom: 60px;
   text-align: start;
 }
+/* .skills{
+  display: flex;
+  justify-content: center;
+}
+
+.skills h2 {
+  text-align: center;
+} */
 
 .Projetos {
   background-color: #191919;

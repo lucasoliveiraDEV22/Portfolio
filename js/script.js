@@ -18,6 +18,23 @@ function checkBoxes() {
   });
 }
 
+/*--------------------Carousel-Animation---------------------- */
+
+let count = 1;
+document.getElementById('radio1').checked = true;
+setInterval(function () {
+  nextImage();
+}, 5000);
+
+function nextImage() {
+  count++;
+  if (count > 4) {
+    count = 1;
+  }
+
+  document.getElementById('radio' + count).checked = true;
+}
+
 /* --------------------Botão para voltar ao topo---------------------- */
 
 // Mostra o botão quando o usuário rolar 20px para baixo
@@ -38,7 +55,6 @@ function scrollFunction() {
 document.getElementById('backToTop').onclick = function () {
   window.scrollTo({ top: 0, behavior: 'smooth' });
 };
-
 
 /* --------------------Lógica do formulário---------------------- */
 
@@ -148,15 +164,15 @@ formSubmit.init();
 
 /*-------------------LÓGICA DO CARROSSEL----------------- */
 
-const swiper = new Swiper(".swiper", {
+const swiper = new Swiper('.swiper', {
   cssMode: true,
   loop: true,
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
   },
   pagination: {
-    el: ".swiper-pagination",
+    el: '.swiper-pagination'
   },
-  keyboard: true,
+  keyboard: true
 });
