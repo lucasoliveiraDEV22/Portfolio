@@ -161,18 +161,3 @@ const formSubmit = new FormSubmit({
   error: "<h1 class='error'>Não foi possível enviar sua mensagem.</h1>"
 });
 formSubmit.init();
-
-/*-------------------LÓGICA DO CARROSSEL----------------- */
-
-const swiper = new Swiper('.swiper', {
-  cssMode: true,
-  loop: true,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev'
-  },
-  pagination: {
-    el: '.swiper-pagination'
-  },
-  keyboard: true
-});
