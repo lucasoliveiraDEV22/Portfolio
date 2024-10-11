@@ -3,13 +3,16 @@
   width: 600px;
   height: 300px;
   overflow: hidden;
+  position: relative; 
+  /* Para garantir que elementos absolutos se posicionem corretamente */
 }
 
 .slides {
   width: 400%;
-  height: 400px;
+  height: 300px;
   display: flex;
-  justify-content: center;
+  transition: margin-left 0.5s ease-in-out;
+  /* justify-content: center; */
 }
 
 .slides input {
@@ -17,23 +20,31 @@
 }
 
 .slide {
-  width: 50%;
-  position: relative;
-}
-
-.slide img {
-  width: 400px;
+  width: 25%; /* Cada slide ocupa 25% (4 imagens no total) */
+  /* position: relative; */
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+#slide-1, #slide-2, #slide-3, #slide-4{
+  width: 100%; /* Definir para 100% do slide */
+  height: 100%; /* Ocupa 100% da altura do slide */
+}
+
+.img-slide {
+  width: 100%; /* Ajuste a imagem para ocupar o tamanho total do slide */
+  height: 100%; /* Mantém a altura uniforme */
+  object-fit: contain; /* Mantém a proporção sem cortar a imagem */
+}
+
 .manual-navigation {
   position: absolute;
-  width: 800px;
-  margin-top: -30px;
+  bottom: 3px; /* Ajuste para alinhar na parte inferior do slider */
+  width: 100%;
   display: flex;
   justify-content: center;
+  z-index: 2; /* Coloca acima da .navigation-auto */
 }
 
 .manual-btn {
@@ -45,7 +56,7 @@
 }
 
 .manual-btn:not(:last-child) {
-  margin-right: 40px;
+  margin-right: 10px;
 }
 
 .manual-btn:hover {
@@ -53,17 +64,26 @@
 }
 
 #radio1:checked ~ .first {
-  margin-left: 0;
+  margin-left: 0; /* Primeira imagem */
 }
 
 #radio2:checked ~ .first {
-  margin-left: -25%;
+  margin-left: -25%; /* Segunda imagem */
 }
 #radio3:checked ~ .first {
-  margin-left: -50%;
+  margin-left: -50%; /* Terceira imagem */
 }
 #radio4:checked ~ .first {
-  margin-left: -75%;
+  margin-left: -75%; /* Quarta imagem */
+}
+
+.navigation-auto {
+  position: absolute;
+  bottom: -30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
 }
 
 .navigation-auto div {
@@ -74,31 +94,23 @@
   transition: 1s;
 }
 
-.navigation-auto {
-  position: absolute;
-  width: 800px;
-  margin-top: 370px;
-  display: flex;
-  justify-content: center;
-}
-
 .navigation-auto div:not(:last-child){
-    margin-right: 40px;
+    margin-right: 10px;
 }
 
 #radio1:checked ~ .navigation-auto .auto-btn1{
     background-color: #fff;
 }
 
-#radio2:checked ~ .navigation-auto .auto-btn1{
+#radio2:checked ~ .navigation-auto .auto-btn2{
     background-color: #fff;
 }
 
-#radio3:checked ~ .navigation-auto .auto-btn1{
+#radio3:checked ~ .navigation-auto .auto-btn3{
     background-color: #fff;
 }
 
-#radio4:checked ~ .navigation-auto .auto-btn1{
+#radio4:checked ~ .navigation-auto .auto-btn4{
     background-color: #fff;
 }
 

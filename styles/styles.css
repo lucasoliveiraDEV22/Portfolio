@@ -6,7 +6,7 @@
   background: #f4f4f4;
 }
 ::-webkit-scrollbar-thumb {
-  background: #2409d5;
+  background: #df0a0a;
   border-radius: 30px;
 }
 
@@ -78,7 +78,7 @@ li {
 }
 
 li:hover {
-  box-shadow: inset 35px 30px 35px #0a1764;
+  box-shadow: inset 35px 30px 35px #640a0a;
   border-radius: 10%;
 }
 
