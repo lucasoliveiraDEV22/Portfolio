@@ -1,5 +1,7 @@
 /*--------------------Scroll-Animation---------------------- */
 
+AOS.init();
+
 const boxes = document.querySelectorAll('.about_text,.card-left, .card-right');
 
 window.addEventListener('scroll', checkBoxes);

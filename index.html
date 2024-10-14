@@ -6,10 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/styles.css" />
     <link rel="stylesheet" href="styles/styles-1.css" />
-    <script
-      src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
-      defer
-    ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
     <script src="js/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -19,9 +16,17 @@
     />
     <link
       rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link
+      rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css"
+    />
     <title>Lucas Rones dos Anjos Oliveira</title>
   </head>
   <body>
@@ -39,6 +44,13 @@
       </nav>
     </header>
     <main>
+      <a
+        class="btn-whatsapp"
+        href="https://wa.me/5598123456789"
+        target="_blank"
+      >
+        <i class="fa fa-whatsapp"></i>
+      </a>
       <section class="meu_nome" id="home">
         <div class="class_home">
           <h1 id="first_title">Lucas <span>Rones</span></h1>
@@ -67,64 +79,113 @@
         </div>
       </section>
       <section class="hobbies" id="hobbies">
-        <div class="hobbies-class">
-          <h2>Meus hobbies</h2>
-          <p>
-            Como curiosidade sobre minhas atividades no meu tempo livre, eu faço
-            questão de mencionar que eu gosto muito de ouvir e tocar música,
-            gosto de ler, de assistir jogo de futebol e gosto de assistir
-            palestras ou filmes de ficção, aventura e superação.
-          </p>
-        </div>
-        <div class="slider">
-          <div class="slides">
-            <!-- RADIO BUTTONS -->
-            <input type="radio" id="radio1" name="radio-btn" />
-            <input type="radio" id="radio2" name="radio-btn" />
-            <input type="radio" id="radio3" name="radio-btn" />
-            <input type="radio" id="radio4" name="radio-btn" />
-
-            <div class="slide first">
-              <img src="./img/real_soccer_ball.svg" alt="soccer-ball" class="img-slide" id="slide-1"/>
-            </div>
-            <div class="slide">
-              <img src="./img/capa-de-livro-book.svg" alt="book-img" class="img-slide" id="slide-2"/>
-            </div>
-            <div class="slide">
-              <img src="./img/movie.jpg" alt="movie-img" class="img-slide" id="slide-3"/>
-            </div>
-            <div class="slide">
-              <img src="./img/guitar.jpg" alt="book-img" class="img-slide" id="slide-4"/>
-            </div>
-            <!-- FIM SLIDE IMAGES -->
-
-            <!-- Navigation Auto -->
-            <div class="navigation-auto">
-              <div class="auto-btn1"></div>
-              <div class="auto-btn2"></div>
-              <div class="auto-btn3"></div>
-              <div class="auto-btn4"></div>
-            </div>
+        <div
+          data-aos="fade-up"
+          data-aos-offset="200"
+          data-aos-delay="50"
+          data-aos-duration="900"
+          data-aos-easing="ease-in-out"
+          data-aos-mirror="true"
+          data-aos-once="false"
+          data-aos-anchor-placement="top-center"
+        >
+          <div class="hobbies-class">
+            <h2>Meus hobbies</h2>
+            <p>
+              Como curiosidade sobre minhas atividades no meu tempo livre, eu
+              faço questão de mencionar que eu gosto muito de ouvir e tocar
+              música, gosto de ler, de assistir jogo de futebol e gosto de
+              assistir palestras ou filmes de ficção, aventura e superação.
+            </p>
           </div>
-          <div class="manual-navigation">
-            <label for="radio1" class="manual-btn"></label>
-            <label for="radio2" class="manual-btn"></label>
-            <label for="radio3" class="manual-btn"></label>
-            <label for="radio4" class="manual-btn"></label>
+          <div class="slider">
+            <div class="slides">
+              <!-- RADIO BUTTONS -->
+              <input type="radio" id="radio1" name="radio-btn" />
+              <input type="radio" id="radio2" name="radio-btn" />
+              <input type="radio" id="radio3" name="radio-btn" />
+              <input type="radio" id="radio4" name="radio-btn" />
+
+              <div class="slide first">
+                <img
+                  src="./img/soccer-player.jpg"
+                  alt="soccer-ball"
+                  class="img-slide"
+                  id="slide-1"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./img/book-image.jpg"
+                  alt="book-img"
+                  class="img-slide"
+                  id="slide-2"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./img/movies.jpg"
+                  alt="movie-img"
+                  class="img-slide"
+                  id="slide-3"
+                />
+              </div>
+              <div class="slide">
+                <img
+                  src="./img/playing-guitar.jpg"
+                  alt="guitar-image"
+                  class="img-slide"
+                  id="slide-4"
+                />
+              </div>
+              <!-- FIM SLIDE IMAGES -->
+
+              <!-- Navigation Auto -->
+              <div class="navigation-auto">
+                <div class="auto-btn1"></div>
+                <div class="auto-btn2"></div>
+                <div class="auto-btn3"></div>
+                <div class="auto-btn4"></div>
+              </div>
+            </div>
+            <div class="manual-navigation">
+              <label for="radio1" class="manual-btn"></label>
+              <label for="radio2" class="manual-btn"></label>
+              <label for="radio3" class="manual-btn"></label>
+              <label for="radio4" class="manual-btn"></label>
+            </div>
           </div>
         </div>
       </section>
-      <!-- <section class="skills">
+      <section class="skills">
         <h2>Skills</h2>
-        <!-- <div class="skill-cards">
-          <div class="skill-figure"></div>
-          <div class="skill-figure"></div>
-          <div class="skill-figure"></div>
-          <div class="skill-figure"></div>
-          <div class="skill-figure"></div>
-          <div class="skill-figure"></div>
-        </div> -->
-      <!-- </section>  -->
+        <div class="skill-cards">
+          <div class="skill-figure">
+            <i class="fa-brands fa-html5"></i>
+          </div>
+          <div class="skill-figure">
+            <i class="fa-brands fa-css3"></i>
+          </div>
+          <div class="skill-figure">
+            <i class="fa-brands fa-js"></i>
+          </div>
+          <div class="skill-figure">
+            <i class="fa-brands fa-node"></i>
+          </div>
+          <div class="skill-figure">
+            <i class="fa-brands fa-react"></i>
+          </div>
+          <div class="skill-figure">
+            <i class="fa-solid fa-database"></i>
+          </div>
+          <div class="skill-figure">
+            <i class="fa-brands fa-git"></i>
+          </div>
+          <div class="skill-figure">
+            <i class="fa-brands fa-github"></i>
+          </div>
+        </div>
+      </section>
 
       <section class="Projetos" id="projetos-id">
         <h2>Principais Projetos</h2>

@@ -25,17 +25,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
 #slide-1, #slide-2, #slide-3, #slide-4{
   width: 100%; /* Definir para 100% do slide */
   height: 100%; /* Ocupa 100% da altura do slide */
+  border: 2px solid #df0a0a;
 }
 
 .img-slide {
   width: 100%; /* Ajuste a imagem para ocupar o tamanho total do slide */
   height: 100%; /* Mantém a altura uniforme */
   object-fit: contain; /* Mantém a proporção sem cortar a imagem */
+  
 }
 
 .manual-navigation {
@@ -48,7 +51,7 @@
 }
 
 .manual-btn {
-  border: 2px solid #fff;
+  border: 2px solid #df0a0a;
   padding: 5px;
   border-radius: 10px;
   cursor: pointer;

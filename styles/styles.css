@@ -30,6 +30,7 @@ html {
   --main-card-color: #4a0808;
   --main-nav-hover: #fcec13;
   --main-home-background: #22211d;
+  --text-shadow: #f10606;
   --font-first-section: #f9f4e3;
 }
 
@@ -39,6 +40,24 @@ body {
   overflow-x: hidden;
 }
 
+.btn-whatsapp {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 1px 1px 2px #888;
+  z-index: 1000;
+}
+
+.fa-whatsapp {
+  margin-top: 16px;
+}
 
 .caixa-principal {
   width: 100%;
@@ -78,7 +97,7 @@ li {
 }
 
 li:hover {
-  box-shadow: inset 35px 30px 35px #640a0a;
+  box-shadow: inset 35px 30px 35px #d10a0a;
   border-radius: 10%;
 }
 
@@ -197,7 +216,7 @@ header {
 }
 
 .about div {
-  text-shadow: 3px 7px 12px rgb(151, 15, 15);
+  text-shadow: 3px 7px 12px var(--text-shadow);
 }
 
 .about div h2 {
@@ -213,7 +232,7 @@ header {
 }
 
 .about div button {
-  background: #110b39;
+  background: #bb0707;
   height: 90px;
   width: 210px;
   font-size: 24px;
@@ -245,7 +264,7 @@ header {
   width: 500px;
   height: 520px;
   border-radius: 100%;
-  border: 3px solid #364ca3;
+  border: 3px solid rgb(243, 5, 5);
   margin-right: 40px;
 }
 
@@ -275,7 +294,8 @@ header {
   flex-direction: column;
 }
 
-.hobbies-class{
+.hobbies-class {
+  text-shadow: 3px 7px 12px var(--text-shadow);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -295,14 +315,50 @@ header {
   margin-bottom: 60px;
   text-align: start;
 }
-/* .skills{
+.skills {
+  padding: 70px 15%;
   display: flex;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
 }
 
 .skills h2 {
+  text-shadow: 3px 7px 12px var(--text-shadow);
   text-align: center;
-} */
+  color: white;
+  font-size: 75px;
+}
+
+.skill-cards{
+  display:grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 1.2rem;
+  grid-row-gap: 1.2rem;
+  margin: 2rem auto;
+
+}
+
+.skill-figure{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 11rem;
+  height: 10.875rem;
+  background-color: #fff;
+  box-shadow: var(--text-shadow) 0px 0px 6px 6px;
+}
+
+.fa-brands{
+  font-size: 4rem;
+}
+
+.fa-database{
+  font-size: 4rem;
+}
+
+
 
 .Projetos {
   background-color: #191919;
@@ -317,6 +373,7 @@ header {
   color: white;
   font-size: 75px;
   text-align: center;
+  text-shadow: 3px 7px 12px var(--text-shadow);
 }
 .card-projects {
   display: flex;
