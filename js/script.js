@@ -37,6 +37,18 @@ function nextImage() {
   document.getElementById('radio' + count).checked = true;
 }
 
+
+/* --------------------Função para trocar as skills---------------------- */
+function showTitle(element) {
+  element.querySelector('.skill-content').style.display = 'flex';
+  element.querySelector('.icon').style.display = 'none';
+}
+
+function showIcon(element) {
+  element.querySelector('.skill-content').style.display = 'none';
+  element.querySelector('.icon').style.display = 'block';
+}
+
 /* --------------------Botão para voltar ao topo---------------------- */
 
 // Mostra o botão quando o usuário rolar 20px para baixo

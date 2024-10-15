@@ -160,8 +160,16 @@
       <section class="skills">
         <h2>Skills</h2>
         <div class="skill-cards">
-          <div class="skill-figure">
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
             <i class="fa-brands fa-html5"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>HTML</p>
+            </div>
           </div>
           <div class="skill-figure">
             <i class="fa-brands fa-css3"></i>
