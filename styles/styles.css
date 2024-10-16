@@ -331,52 +331,64 @@ header {
   font-size: 75px;
 }
 
-.skill-cards{
-  display:grid;
+.skill-cards {
+  display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1.2rem;
   grid-row-gap: 1.2rem;
   margin: 2rem auto;
-
 }
 
-.skill-figure{
+.skill-figure {
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   width: 11rem;
   height: 10.875rem;
   background-color: #fff;
+  transition: background-color 0.3s ease; /* transição suave para a cor */
   box-shadow: var(--text-shadow) 0px 0px 6px 6px;
 }
 .skill-content {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: rgb(0, 0, 0); /* cor do texto */
 }
 
+.skill-content h3 {
+  font-size: 1.5rem;
+  font-weight: 600; /* deixa o font-weight mais grosso */
+  margin-bottom: 10px; /* espaçamento entre o h3 e o p */
+}
+
+.icon {
+  font-size: 3rem;
+  transition: opacity 1.5s ease; /* Animação suave */
+}
+
+.skill-figure:hover {
+  background-color: #ff0000; /* nova cor ao passar o mouse */
+}
 
 .skill-figure:hover .skill-content {
   display: flex;
-  z-index:1;
 }
 
 .skill-figure:hover .icon {
-  display: none;
-  z-index:2;
+  opacity: 0; /* Esconde o ícone com transparência */
 }
 
-.fa-brands{
+.fa-brands {
   font-size: 4rem;
 }
 
-.fa-database{
+.fa-database {
   font-size: 4rem;
 }
-
-
 
 .Projetos {
   background-color: #191919;

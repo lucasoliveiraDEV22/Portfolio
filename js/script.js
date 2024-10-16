@@ -37,16 +37,28 @@ function nextImage() {
   document.getElementById('radio' + count).checked = true;
 }
 
-
 /* --------------------Função para trocar as skills---------------------- */
 function showTitle(element) {
-  element.querySelector('.skill-content').style.display = 'flex';
-  element.querySelector('.icon').style.display = 'none';
+  const icon = element.querySelector('.icon');
+  const content = element.querySelector('.skill-content');
+
+  if (icon) {
+    icon.remove(); // Remove o ícone completamente
+  }
+
+  content.style.display = 'flex'; // Mostra o conteúdo
+  
 }
 
 function showIcon(element) {
-  element.querySelector('.skill-content').style.display = 'none';
-  element.querySelector('.icon').style.display = 'block';
+  const content = element.querySelector('.skill-content');
+
+  // Restaurar o ícone quando o mouse sair
+  const icon = document.createElement('i');
+  icon.classList.add('fa-brands', 'fa-html5', 'icon');
+  element.prepend(icon);
+
+  content.style.display = 'none'; // Esconde o conteúdo
 }
 
 /* --------------------Botão para voltar ao topo---------------------- */
