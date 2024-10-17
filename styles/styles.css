@@ -25,7 +25,7 @@ html {
 }
 
 :root {
-  --primary-color: #2409d5;
+  --primary-color: #d50909;
   --main-white-color: #fff;
   --main-card-color: #4a0808;
   --main-nav-hover: #fcec13;
@@ -45,7 +45,7 @@ body {
   width: 60px;
   height: 60px;
   bottom: 40px;
-  right: 40px;
+  left: 40px;
   background-color: #25d366;
   color: #fff;
   border-radius: 50px;
@@ -348,30 +348,40 @@ header {
   height: 10.875rem;
   background-color: #fff;
   transition: background-color 0.3s ease; /* transição suave para a cor */
-  box-shadow: var(--text-shadow) 0px 0px 6px 6px;
+  box-shadow: var(--text-shadow) 0px 0px 4px 4px;
+  cursor: pointer;
 }
 .skill-content {
-  display: flex;
+  display: none; /* Inicialmente, o conteúdo está oculto */
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
+  gap: 1rem;
   color: rgb(0, 0, 0); /* cor do texto */
+  transition: opacity 1.3s ease; /* transição suave para o conteúdo */
 }
 
 .skill-content h3 {
-  font-size: 1.5rem;
-  font-weight: 600; /* deixa o font-weight mais grosso */
+  font-size: 1.8rem;
   margin-bottom: 10px; /* espaçamento entre o h3 e o p */
+}
+
+.skill-content p {
+  margin: 0; /* remove qualquer margem padrão do parágrafo */
+  font-weight: 400;
+  text-decoration: underline .125rem; 
 }
 
 .icon {
   font-size: 3rem;
-  transition: opacity 1.5s ease; /* Animação suave */
+  transition: opacity 1.5s ease; /* transição suave para o ícone */
 }
 
 .skill-figure:hover {
   background-color: #ff0000; /* nova cor ao passar o mouse */
+  transform: scale(1.1);
+  transition: 1.6s;
 }
 
 .skill-figure:hover .skill-content {
@@ -379,7 +389,7 @@ header {
 }
 
 .skill-figure:hover .icon {
-  opacity: 0; /* Esconde o ícone com transparência */
+  display: none; /* Esconde o ícone quando o mouse está sobre a div */
 }
 
 .fa-brands {
@@ -388,6 +398,19 @@ header {
 
 .fa-database {
   font-size: 4rem;
+}
+
+.scroll-fade {
+  opacity: 0;
+  transition: opacity 0.6s ease-in-out;
+}
+
+.scroll-fade.visible {
+  opacity: 1;
+}
+
+.scroll-fade.hidden {
+  opacity: 0;
 }
 
 .Projetos {
@@ -605,8 +628,8 @@ footer p {
   bottom: 20px; /* Posiciona o botão a 20px do fundo da tela */
   right: 30px; /* Posiciona o botão a 30px da direita da tela */
   z-index: 99; /* Garante que o botão esteja na frente de outros elementos */
-  font-size: 50px; /* Tamanho da fonte */
-  background-color: #3300c1; /* Cor de fundo */
+  font-size: 30px; /* Tamanho da fonte */
+  background-color: var(--main-card-color); /* Cor de fundo */
   color: white; /* Cor do texto */
   border: none; /* Sem bordas */
   outline: none; /* Sem contorno */

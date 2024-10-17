@@ -1,6 +1,23 @@
 /*--------------------Scroll-Animation---------------------- */
+document.addEventListener('DOMContentLoaded', function () {
+  const section = document.querySelector('.scroll-fade');
+  let lastScrollY = window.scrollY;
 
-AOS.init();
+  window.addEventListener('scroll', function () {
+    const currentScrollY = window.scrollY;
+
+    if (currentScrollY > lastScrollY) {
+      // Scroll para baixo, mostra a seção
+      section.classList.add('visible');
+      section.classList.remove('hidden');
+    } else {
+      // Scroll para cima, esconde a seção
+      section.classList.add('hidden');
+      section.classList.remove('visible');
+    }
+    lastScrollY = currentScrollY;
+  });
+});
 
 const boxes = document.querySelectorAll('.about_text,.card-left, .card-right');
 
@@ -41,24 +58,24 @@ function nextImage() {
 function showTitle(element) {
   const icon = element.querySelector('.icon');
   const content = element.querySelector('.skill-content');
-
-  if (icon) {
-    icon.remove(); // Remove o ícone completamente
-  }
-
-  content.style.display = 'flex'; // Mostra o conteúdo
-  
+  // Mostra o conteúdo e esconde o ícone
+  // icon.style.display = 'none';
+  // content.style.display = 'flex';
+  // Mostra o conteúdo e aplica a transição para o ícone
+  icon.style.opacity = '0';
+  content.style.opacity = '1';
 }
 
 function showIcon(element) {
+  const icon = element.querySelector('.icon');
   const content = element.querySelector('.skill-content');
 
   // Restaurar o ícone quando o mouse sair
-  const icon = document.createElement('i');
-  icon.classList.add('fa-brands', 'fa-html5', 'icon');
-  element.prepend(icon);
-
-  content.style.display = 'none'; // Esconde o conteúdo
+  // content.style.display = 'none';
+  // icon.style.display = 'block';
+  // Esconde o conteúdo e aplica a transição para o ícone
+  content.style.opacity = '0';
+  icon.style.opacity = '1';
 }
 
 /* --------------------Botão para voltar ao topo---------------------- */

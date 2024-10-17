@@ -37,7 +37,7 @@
           <li><a class="link-menu" href="#home">Home</a></li>
           <li><a class="link-menu" href="#sobre">Sobre</a></li>
           <li><a class="link-menu" href="#hobbies">Hobbies</a></li>
-          <li><a class="link-menu" href="#Skills">Skills</a></li>
+          <li><a class="link-menu" href="#skills-link">Skills</a></li>
           <li><a class="link-menu" href="#projetos-id">Projetos</a></li>
           <li><a class="link-menu" href="#fale-comigo">Contato</a></li>
         </ul>
@@ -46,7 +46,7 @@
     <main>
       <a
         class="btn-whatsapp"
-        href="https://wa.me/5598123456789"
+        href="https://wa.me/5541999332332"
         target="_blank"
       >
         <i class="fa fa-whatsapp"></i>
@@ -78,17 +78,8 @@
           </button>
         </div>
       </section>
-      <section class="hobbies" id="hobbies">
-        <div
-          data-aos="fade-up"
-          data-aos-offset="200"
-          data-aos-delay="50"
-          data-aos-duration="900"
-          data-aos-easing="ease-in-out"
-          data-aos-mirror="true"
-          data-aos-once="false"
-          data-aos-anchor-placement="top-center"
-        >
+      <section class="hobbies scroll-fade" data-aos="fade-up"  id="hobbies">
+     
           <div class="hobbies-class">
             <h2>Meus hobbies</h2>
             <p>
@@ -155,9 +146,9 @@
               <label for="radio4" class="manual-btn"></label>
             </div>
           </div>
-        </div>
       </section>
-      <section class="skills">
+      <section class="skills scroll-fade"  data-aos="fade-up" id="skills-link">
+   
         <h2>Skills</h2>
         <div class="skill-cards">
           <div
@@ -171,31 +162,87 @@
               <p>HTML</p>
             </div>
           </div>
-          <div class="skill-figure">
-            <i class="fa-brands fa-css3"></i>
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
+            <i class="fa-brands fa-css3 icon"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>CSS</p>
+            </div>
           </div>
-          <div class="skill-figure">
-            <i class="fa-brands fa-js"></i>
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
+            <i class="fa-brands fa-js icon"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>JavaScript</p>
+            </div>
           </div>
-          <div class="skill-figure">
-            <i class="fa-brands fa-node"></i>
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
+            <i class="fa-brands fa-node icon"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>NodeJS</p>
+            </div>
           </div>
-          <div class="skill-figure">
-            <i class="fa-brands fa-react"></i>
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
+            <i class="fa-brands fa-react icon"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>ReactJS</p>
+            </div>
           </div>
-          <div class="skill-figure">
-            <i class="fa-solid fa-database"></i>
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
+            <i class="fa-solid fa-database icon"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>Banco de dados</p>
+            </div>
           </div>
-          <div class="skill-figure">
-            <i class="fa-brands fa-git"></i>
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
+            <i class="fa-brands fa-git icon"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>Git</p>
+            </div>
           </div>
-          <div class="skill-figure">
-            <i class="fa-brands fa-github"></i>
+          <div
+            class="skill-figure"
+            onmousemove="showTitle(this)"
+            onmouseout="showIcon(this)"
+          >
+            <i class="fa-brands fa-github icon"></i>
+            <div class="skill-content">
+              <h3>Hard Skill</h3>
+              <p>GitHub</p>
+            </div>
           </div>
-        </div>
       </section>
 
-      <section class="Projetos" id="projetos-id">
+      <section class="Projetos scroll-fade" data-aos="fade-up" id="projetos-id">
+        
         <h2>Principais Projetos</h2>
         <div class="card-projects">
           <div class="card-right">
@@ -212,7 +259,7 @@
                 acessível.
               </p>
               <a href="https://projectinstadev.netlify.app/" target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
             <div class="card">
@@ -228,7 +275,7 @@
                 escuro.
               </p>
               <a href="https://starcafe-website.netlify.app/" target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
             <div class="card">
@@ -246,7 +293,7 @@
               <a
                 href="https://currency-new-converter.netlify.app/"
                 target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
           </div>
@@ -267,7 +314,7 @@
               <a
                 href="https://cadastronovosusuarios.netlify.app/"
                 target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
             <div class="card">
@@ -284,7 +331,7 @@
                 e remover as tarefas assim que decidirmos removê-las.
               </p>
               <a href="https://newtasks.netlify.app/" target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
             <div class="card">
@@ -297,7 +344,7 @@
                 formulário para contato.
               </p>
               <a href="https://tacseg.netlify.app/" target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
           </div>
@@ -312,7 +359,7 @@
                 foi elaborada com ReactJS, material UI e Google Key API.
               </p>
               <a href="https://www.actualprinter.com.br/" target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
             <div class="card">
@@ -328,7 +375,7 @@
               <a
                 href="https://projeto-decodificador-theta.vercel.app/"
                 target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
             <div class="card">
@@ -342,11 +389,10 @@
                 também.
               </p>
               <a href="https://devlucas.hatch.one/fit-projetc" target="_blank"
-                >Ver Projeto</a
+                >Visualizar</a
               >
             </div>
           </div>
-        </div>
       </section>
     </main>
     <footer id="fale-comigo">
