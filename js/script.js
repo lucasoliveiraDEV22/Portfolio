@@ -1,22 +1,24 @@
 /*--------------------Scroll-Animation---------------------- */
 document.addEventListener('DOMContentLoaded', function () {
-  const section = document.querySelector('.scroll-fade');
+  const section = document.querySelectorAll('.scroll-fade');
   let lastScrollY = window.scrollY;
+
 
   window.addEventListener('scroll', function () {
     const currentScrollY = window.scrollY;
 
     if (currentScrollY > lastScrollY) {
-      // Scroll para baixo, mostra a seção
+       // Se o usuário está rolando para baixo, a seção continua visível
       section.classList.add('visible');
       section.classList.remove('hidden');
     } else {
-      // Scroll para cima, esconde a seção
+     // Se o usuário está rolando para cima, oculta a seção
       section.classList.add('hidden');
       section.classList.remove('visible');
     }
     lastScrollY = currentScrollY;
   });
+  
 });
 
 const boxes = document.querySelectorAll('.about_text,.card-left, .card-right');
