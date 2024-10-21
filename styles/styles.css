@@ -370,7 +370,7 @@ header {
 .skill-content p {
   margin: 0; /* remove qualquer margem padrão do parágrafo */
   font-weight: 400;
-  text-decoration: underline .125rem; 
+  text-decoration: underline 0.125rem;
 }
 
 .icon {
@@ -402,7 +402,7 @@ header {
 
 .scroll-fade {
   opacity: 1;
-  transition: opacity 0.6s ease-in-out;
+  transition: opacity 1s ease-in-out;
 }
 
 .scroll-fade.visible {

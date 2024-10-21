@@ -1,26 +1,27 @@
 /*--------------------Scroll-Animation---------------------- */
 document.addEventListener('DOMContentLoaded', function () {
-  const section = document.querySelectorAll('.scroll-fade');
+  const sections = document.querySelectorAll('.scroll-fade');
   let lastScrollY = window.scrollY;
-
 
   window.addEventListener('scroll', function () {
     const currentScrollY = window.scrollY;
-
-    if (currentScrollY > lastScrollY) {
-       // Se o usuário está rolando para baixo, a seção continua visível
-      section.classList.add('visible');
-      section.classList.remove('hidden');
-    } else {
-     // Se o usuário está rolando para cima, oculta a seção
-      section.classList.add('hidden');
-      section.classList.remove('visible');
-    }
-    lastScrollY = currentScrollY;
+    console.log(sections);
+    sections.forEach((section) => {
+      if (currentScrollY > lastScrollY) {
+        // Se o usuário está rolando para baixo, a seção continua visível
+        section.classList.add('visible');
+        section.classList.remove('hidden');
+      } else {
+        // Se o usuário está rolando para cima, oculta a seção
+        section.classList.add('hidden');
+        section.classList.remove('visible');
+      }
+      lastScrollY = currentScrollY;
+    });
   });
-  
 });
 
+/*--------------------Boxes Scroll Animation---------------------- */
 const boxes = document.querySelectorAll('.about_text,.card-left, .card-right');
 
 window.addEventListener('scroll', checkBoxes);
@@ -64,8 +65,11 @@ function showTitle(element) {
   // icon.style.display = 'none';
   // content.style.display = 'flex';
   // Mostra o conteúdo e aplica a transição para o ícone
+ // Aplicar transições com verificação
+ if (icon && content) {
   icon.style.opacity = '0';
   content.style.opacity = '1';
+}
 }
 
 function showIcon(element) {
@@ -76,8 +80,10 @@ function showIcon(element) {
   // content.style.display = 'none';
   // icon.style.display = 'block';
   // Esconde o conteúdo e aplica a transição para o ícone
-  content.style.opacity = '0';
-  icon.style.opacity = '1';
+  if (icon && content) {
+    content.style.opacity = '0';
+    icon.style.opacity = '1';
+  }
 }
 
 /* --------------------Botão para voltar ao topo---------------------- */
