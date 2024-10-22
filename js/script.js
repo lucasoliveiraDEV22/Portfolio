@@ -1,23 +1,22 @@
 /*--------------------Scroll-Animation---------------------- */
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.scroll-fade');
-  let lastScrollY = window.scrollY;
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target); // Para observar apenas uma vez
+        }
+      });
+    },
+    {
+      threshold: 0.2, // 20% da seção visível para ativar
+    }
+  );
 
-  window.addEventListener('scroll', function () {
-    const currentScrollY = window.scrollY;
-    console.log(sections);
-    sections.forEach((section) => {
-      if (currentScrollY > lastScrollY) {
-        // Se o usuário está rolando para baixo, a seção continua visível
-        section.classList.add('visible');
-        section.classList.remove('hidden');
-      } else {
-        // Se o usuário está rolando para cima, oculta a seção
-        section.classList.add('hidden');
-        section.classList.remove('visible');
-      }
-      lastScrollY = currentScrollY;
-    });
+  sections.forEach((section) => {
+    observer.observe(section);
   });
 });
 

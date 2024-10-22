@@ -401,8 +401,8 @@ header {
 }
 
 .scroll-fade {
-  opacity: 1;
-  transition: opacity 1s ease-in-out;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .scroll-fade.visible {
@@ -412,7 +412,6 @@ header {
 .scroll-fade.hidden {
   opacity: 0;
 }
-
 .Projetos {
   background-color: #191919;
   padding-top: 5rem;
