@@ -150,7 +150,7 @@
       </section>
       <section class="skills" id="skills-link">
    
-        <h2>Skills</h2>
+        <h2 class="scroll-fade">Skills</h2>
         <div class="skill-cards scroll-fade">
           <div
             class="skill-figure"
@@ -247,21 +247,30 @@
         <h2  class="scroll-fade">Principais Projetos</h2>
         <div class="card-projects">
           <div class="card-right">
-            <div class="card">
+            <div class="card"
+            onmousemove="showText(this)"
+            onmouseout="showContent(this)"
+            >
+            <div class="card_text_elements">
               <img
                 src="./img/Intagram-icon.webp"
                 alt="instagram-image"
                 class="image-project"
               />
-              <h5>Instagram</h5>
-              <p>
-                O objetivo desse projeto foi replicar uma interface de página de
-                login do Instagram, com o intuito de deixá-la dinâmica e
-                acessível.
+              <h5 class="title">Instagram</h5>
+              <p class="paragraph">
+               Clique abaixo para abrir a aplicação e para visualizar o deploy.
               </p>
+              </div>
+               <div class="card-content">
+              <p> O objetivo desse projeto foi replicar uma interface de página de
+                login do Instagram, com o intuito de deixá-la dinâmica e
+                acessível.</p>
+             </div>
               <a href="https://projectinstadev.netlify.app/" target="_blank"
-                >Visualizar</a
+                class="link">Visualizar</a
               >
+            
             </div>
             <div class="card">
               <img
@@ -352,15 +361,15 @@
           <div class="card-right">
             <div class="card">
               <img src="./img/actual-printer.PNG" alt="" />
-              <h5>Actual Printer</h5>
-              <p>
+              <h5 class="title">Actual Printer</h5>
+              <p class="paragraph">
                 Projeto elaborado para a empresa de papelaria Actual Printer, na
                 qual havia a demanda para construção de um website para seus
                 clientes entrarem em contato com os responsáveis. Esta aplicação
                 foi elaborada com ReactJS, material UI e Google Key API.
               </p>
               <a href="https://www.actualprinter.com.br/" target="_blank"
-                >Visualizar</a
+               class="link" >Visualizar</a
               >
             </div>
             <div class="card">

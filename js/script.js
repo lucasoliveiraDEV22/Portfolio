@@ -1,22 +1,29 @@
 /*--------------------Scroll-Animation---------------------- */
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.scroll-fade');
-  const observer = new IntersectionObserver(
-    (entries, observer) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target); // Para observar apenas uma vez
-        }
-      });
-    },
-    {
-      threshold: 0.2, // 20% da seção visível para ativar
-    }
-  );
+let lastScrollY = window.scrollY;
 
-  sections.forEach((section) => {
-    observer.observe(section);
+  window.addEventListener('scroll', function () {
+    const currentScrollY = window.scrollY;
+
+    sections.forEach((section) => {
+      const sectionTop = section.getBoundingClientRect().top + window.scrollY;
+      
+      if (currentScrollY > lastScrollY) {
+        // Rolando para baixo
+        if (currentScrollY + window.innerHeight > sectionTop) {
+          section.classList.add('visible');
+          section.classList.remove('hidden');
+        }
+      } else {
+        // Rolando para cima
+        if (currentScrollY + window.innerHeight < sectionTop + section.offsetHeight) {
+          section.classList.add('hidden');
+          section.classList.remove('visible');
+        }
+      }
+    });
+    lastScrollY = currentScrollY;
   });
 });
 
@@ -83,6 +90,26 @@ function showIcon(element) {
     content.style.opacity = '0';
     icon.style.opacity = '1';
   }
+}
+
+/* --------------------Função para substituir as os elementos dos cards por texto---------------------- */
+function showText(element){
+  const text = element.querySelector('.card_text_elements');
+  const cardContent = element.querySelector('.card-content')
+
+  if(text && cardContent){
+    text.style.opacity = '0';
+    cardContent.style.opacity = '1';
+  }
+}
+
+function showContent(element){
+  const text = element.querySelector('.card_text_elements');
+  const cardContent = element.querySelector('.card-content')
+  if(text && cardContent){
+    text.style.opacity = '1';
+    cardContent.style.opacity = '0';
+    }
 }
 
 /* --------------------Botão para voltar ao topo---------------------- */
