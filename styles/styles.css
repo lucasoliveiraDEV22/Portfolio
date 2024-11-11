@@ -476,7 +476,8 @@ header {
 }
 
 .card-content{
-  display: none;
+  opacity: 0;
+  visibility: hidden;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -492,12 +493,25 @@ header {
   transition: 1.6s;
 }
 
+.card_text_elements{
+  opacity: 1;
+  transition: opacity 0.4s ease;
+  visibility: visible;
+}
+
 .card_text_elements:hover{
   display: none;
 }
 
+.card:hover .card_text_elements {
+  opacity: 0;
+  visibility: hidden;
+}
+
 .card:hover .card-content{
   display: flex;
+  opacity: 1;
+  visibility: visible;
 }
 
 

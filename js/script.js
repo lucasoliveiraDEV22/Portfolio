@@ -99,7 +99,9 @@ function showText(element){
 
   if(text && cardContent){
     text.style.opacity = '0';
+    text.style.visibility = 'hidden';
     cardContent.style.opacity = '1';
+    cardContent.style.visibility = 'visible';
   }
 }
 
@@ -108,7 +110,9 @@ function showContent(element){
   const cardContent = element.querySelector('.card-content')
   if(text && cardContent){
     text.style.opacity = '1';
+    text.style.visibility = 'visible';
     cardContent.style.opacity = '0';
+    cardContent.style.visibility = 'hidden';
     }
 }
 
