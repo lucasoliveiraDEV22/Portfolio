@@ -272,18 +272,27 @@
               >
             
             </div>
-            <div class="card">
+            <div class="card"
+            onmousemove="showText(this)"
+            onmouseout="showContent(this)">
+            <div class="card_text_elements">
               <img
                 src="./img/starbucks.png"
                 alt="starbucks-image"
                 class="image-project"
               />
               <h5>Starbucks</h5>
+              <p class="paragraph">
+                Clique abaixo para abrir a aplicação e para visualizar o deploy.
+               </p>
+            </div>
+            <div class="card-content">
               <p>
                 A aplicação "Starbucks" baseou-se na escolha de tipos de café,
                 especificados pelas cores de fundo: verde, rosa claro e rosa
                 escuro.
               </p>
+            </div>
               <a href="https://starcafe-website.netlify.app/" target="_blank"
                 >Visualizar</a
               >
