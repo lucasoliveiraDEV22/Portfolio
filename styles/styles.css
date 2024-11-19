@@ -466,18 +466,18 @@ header {
 }
 
 .card {
-  background-color: #4a0808;
+  background-color: #0e0322;
   height: 400px;
   width: 340px;
   border-radius: 20px;
   padding: 3px 0;
   text-align: center;
-  box-shadow: rgba(37, 231, 173, 0.2) 5px 7px 29px 0px;
+  box-shadow: 8px 12px 30px 0px var(--primary-color);
   transition: transform 0.3s ease-in-out;
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
-.card-content{
+.card-content {
   opacity: 0;
   visibility: hidden;
   flex-direction: column;
@@ -488,21 +488,21 @@ header {
 }
 
 .card:hover {
-  background-color: #1f1d07; /* Altera a cor de fundo ao passar o mouse */
+  background-color: #1f0707; /* Altera a cor de fundo ao passar o mouse */
   cursor: pointer;
-  box-shadow: white 0px 0px 8px 8px;
+  box-shadow: rgb(163, 32, 32) 0px 0px 8px 8px;
   transform: scale(1.1);
   transition: 1.6s;
-  border: 2px solid #ff7e5f;
+  border: 2px solid #d81313;
 }
 
-.card_text_elements{
+.card_text_elements {
   opacity: 1;
   transition: opacity 1s ease;
   visibility: visible;
 }
 
-.card_text_elements:hover{
+.card_text_elements:hover {
   display: none;
 }
 
@@ -511,15 +511,14 @@ header {
   visibility: hidden;
 }
 
-.card:hover .card-content{
+.card:hover .card-content {
   display: flex;
   opacity: 1;
   visibility: visible;
 }
 
-
 .card img {
-  height: 5rem;
+  height: 3rem;
 }
 
 .card h5 {
@@ -527,15 +526,15 @@ header {
   font-size: 2rem;
 }
 
-.card p {
-  color: #d6d0e3;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  
+.paragraph {
+  color: #ffffff;
+  margin: 0.7rem 0;
+  font-size: 0.85rem;
+  text-shadow: 3px 7px 12px #3419ac;
 }
 
 .card a {
-  background-color: #140433;
+  background-color: var(--primary-color);
   color: white;
   font-size: 15px;
   padding: 10px 20px;
