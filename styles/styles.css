@@ -470,7 +470,7 @@ header {
   height: 400px;
   width: 340px;
   border-radius: 20px;
-  padding: 10px;
+  padding: 3px 0;
   text-align: center;
   box-shadow: rgba(37, 231, 173, 0.2) 5px 7px 29px 0px;
   transition: transform 0.3s ease-in-out;
@@ -529,15 +529,15 @@ header {
 
 .card p {
   color: #d6d0e3;
-  margin-top: 0.625rem;
+  margin: 0.5rem 0;
   font-size: 1rem;
-  margin-bottom: 1.8rem;
+  
 }
 
 .card a {
   background-color: #140433;
   color: white;
-  font-size: 20px;
+  font-size: 15px;
   padding: 10px 20px;
   border-radius: 30px;
   cursor: pointer;
