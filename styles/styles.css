@@ -530,7 +530,13 @@ header {
   color: #ffffff;
   margin: 0.7rem 0;
   font-size: 0.85rem;
-  text-shadow: 3px 7px 12px #3419ac;
+  text-shadow: 3px 7px 12px var(--primary-color);
+}
+
+.text-explanation{
+  font-size: 0.85rem;
+  color: #ffff;
+  text-shadow: 3px 7px 12px var(--primary-color);
 }
 
 .card a {
