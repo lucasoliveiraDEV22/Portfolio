@@ -1,3 +1,12 @@
+/* Lógica do Swiper */
+
+let swiper = new Swiper(".mySwiper", {
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
+
 /*--------------------Scroll-Animation---------------------- */
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.scroll-fade');

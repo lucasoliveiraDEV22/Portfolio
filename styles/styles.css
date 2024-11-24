@@ -324,6 +324,58 @@ header {
   background-color: #000000;
 }
 
+.educational-background{
+  padding: 70px 15%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000000;
+
+}
+
+.swiper {
+  right: 1rem;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  /* Center slide text vertically */
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.slide_1 {
+  background-color: #643ca3;
+}
+
+.slide_2 {
+  background-color: #e38364;
+}
+
+.slide_3 {
+  background-color: #faf47a;
+}
+
+.slide_4 {
+  background-color: #64e3c1;
+}
+
+.slide_5 {
+  background-color: #9e6ffd;
+}
+
 .skills h2 {
   text-shadow: 3px 7px 12px var(--text-shadow);
   text-align: center;
@@ -480,11 +532,21 @@ header {
 .card-content {
   opacity: 0;
   visibility: hidden;
+  position: absolute;  /* Torna o conteúdo absoluto em relação ao card */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
   gap: 1rem;
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.8); /* Adiciona um fundo escuro semitransparente */
+  border-radius: 20px; /* Mantém a borda arredondada */
+  z-index: 1; /* Garante que o texto fique sobre os outros elementos */
 }
 
 .card:hover {
@@ -534,6 +596,7 @@ header {
 }
 
 .text-explanation{
+  margin: 20px;
   font-size: 0.85rem;
   color: #ffff;
   text-shadow: 3px 7px 12px var(--primary-color);
@@ -541,14 +604,17 @@ header {
 
 .card a {
   background-color: var(--primary-color);
+  position: relative; /* Permite que o botão fique acima de outros elementos */
+  top: 37%;
+  z-index: 2; /* Garante que o botão esteja acima do texto explicativo */
   color: white;
   font-size: 15px;
-  padding: 10px 20px;
+  padding: 5px 15px;
   border-radius: 30px;
   cursor: pointer;
   transition: 0.5s;
   text-decoration: none;
-  z-index: 1; /* Certifica-se de que o botão esteja acima de outros elementos */
+  z-index: 2; /* Certifica-se de que o botão esteja acima de outros elementos */
 }
 
 .card a:hover {
@@ -572,6 +638,27 @@ header {
 /* Mostrar o texto explicativo ao passar o mouse */
 .card:hover .card-content {
   opacity: 1;
+  visibility: visible;
+}
+
+.button-deploy{
+  background-color: var(--main-home-background);
+  position: relative; /* Permite que o botão fique acima de outros elementos */
+  top: 37%;
+  z-index: 2; /* Garante que o botão esteja acima do texto explicativo */
+  color: white;
+  font-size: 15px;
+  padding: 5px 15px;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: 0.5s;
+  text-decoration: none;
+  z-index: 2; /* Certifica-se de que o botão esteja acima de outros elementos */
+}
+
+.button-deploy:hover{
+  background-color: rgb(12, 0, 78);
+  border: 2px solid var(--primary-color);
 }
 
 .form-container {
