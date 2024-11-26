@@ -34,10 +34,22 @@ html {
   --font-first-section: #f9f4e3;
 }
 
+:root.theme-light{
+  --primary-color: #0078d4;
+  --main-white-color: #000;
+  --main-card-color: #f5f5f5;
+  --main-nav-hover: #0078d4;
+  --main-home-background: #ffffff;
+  --text-shadow: #cccccc;
+  --font-first-section: #1a1a1a;
+}
+
 body {
   width: 100%;
   height: 100vh;
   overflow-x: hidden;
+  background-color: var(--main-home-background);
+  color: var(--main-white-color);
 }
 
 .btn-whatsapp {
@@ -324,56 +336,79 @@ header {
   background-color: #000000;
 }
 
-.educational-background{
+.educational-background {
   padding: 70px 15%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   background-color: #000000;
+}
 
+.educational-background h2 {
+  color: white;
+  font-size: 75px;
+  text-align: center;
+  text-shadow: 3px 7px 12px var(--text-shadow);
+  margin: 100px;
 }
 
 .swiper {
-  right: 1rem;
   width: 100%;
-  height: 100%;
+  height: 60vh;
 }
 
 .swiper-slide {
   text-align: center;
   /* Center slide text vertically */
-  display: flex !important;
+  display: flex;
   align-items: center;
   justify-content: center;
+  height: 100%; /* Garante que o slide ocupe a altura total do carrossel */
+  font-size: 20px;
+  color:rgb(243, 5, 5);
 }
 
 .swiper-slide img {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  width: auto;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; 
 }
 
 .slide_1 {
-  background-color: #643ca3;
+  background-image: url(../img/alura.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .slide_2 {
-  background-color: #e38364;
+  background-image: url(../img/utp.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
+
 
 .slide_3 {
-  background-color: #faf47a;
+  background-image: url(../img/devclub.jpeg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
-.slide_4 {
-  background-color: #64e3c1;
+
+div.swiper-button-next,
+div.swiper-button-prev {
+  top: 50%;
+  color: var(--text-shadow);
 }
 
-.slide_5 {
-  background-color: #9e6ffd;
+div.swiper-button-next:hover,
+div.swiper-button-prev:hover{
+  box-shadow: 2px 10px 6px #c90a0a;
+  border-radius: 10%;
+  transition: 1s;
 }
 
 .skills h2 {
@@ -532,7 +567,7 @@ header {
 .card-content {
   opacity: 0;
   visibility: hidden;
-  position: absolute;  /* Torna o conteúdo absoluto em relação ao card */
+  position: absolute; /* Torna o conteúdo absoluto em relação ao card */
   top: 0;
   left: 0;
   width: 100%;
@@ -544,7 +579,12 @@ header {
   text-align: center;
   gap: 1rem;
   padding: 20px;
-  background-color: rgba(0, 0, 0, 0.8); /* Adiciona um fundo escuro semitransparente */
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.8
+  ); /* Adiciona um fundo escuro semitransparente */
   border-radius: 20px; /* Mantém a borda arredondada */
   z-index: 1; /* Garante que o texto fique sobre os outros elementos */
 }
@@ -595,14 +635,14 @@ header {
   text-shadow: 3px 7px 12px var(--primary-color);
 }
 
-.text-explanation{
+.text-explanation {
   margin: 20px;
   font-size: 0.85rem;
   color: #ffff;
   text-shadow: 3px 7px 12px var(--primary-color);
 }
 
-.card a {
+.link {
   background-color: var(--primary-color);
   position: relative; /* Permite que o botão fique acima de outros elementos */
   top: 37%;
@@ -617,7 +657,7 @@ header {
   z-index: 2; /* Certifica-se de que o botão esteja acima de outros elementos */
 }
 
-.card a:hover {
+.link:hover {
   background-color: green;
   border: 2px solid #f9004d;
 }
@@ -641,7 +681,7 @@ header {
   visibility: visible;
 }
 
-.button-deploy{
+.button-deploy {
   background-color: var(--main-home-background);
   position: relative; /* Permite que o botão fique acima de outros elementos */
   top: 37%;
@@ -656,7 +696,7 @@ header {
   z-index: 2; /* Certifica-se de que o botão esteja acima de outros elementos */
 }
 
-.button-deploy:hover{
+.button-deploy:hover {
   background-color: rgb(12, 0, 78);
   border: 2px solid var(--primary-color);
 }

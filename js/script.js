@@ -1,23 +1,23 @@
 /* Lógica do Swiper */
 
-let swiper = new Swiper(".mySwiper", {
+let swiper = new Swiper('.mySwiper', {
   navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
 });
 
 /*--------------------Scroll-Animation---------------------- */
 document.addEventListener('DOMContentLoaded', function () {
   const sections = document.querySelectorAll('.scroll-fade');
-let lastScrollY = window.scrollY;
+  let lastScrollY = window.scrollY;
 
   window.addEventListener('scroll', function () {
     const currentScrollY = window.scrollY;
 
     sections.forEach((section) => {
       const sectionTop = section.getBoundingClientRect().top + window.scrollY;
-      
+
       if (currentScrollY > lastScrollY) {
         // Rolando para baixo
         if (currentScrollY + window.innerHeight > sectionTop) {
@@ -26,7 +26,10 @@ let lastScrollY = window.scrollY;
         }
       } else {
         // Rolando para cima
-        if (currentScrollY + window.innerHeight < sectionTop + section.offsetHeight) {
+        if (
+          currentScrollY + window.innerHeight <
+          sectionTop + section.offsetHeight
+        ) {
           section.classList.add('hidden');
           section.classList.remove('visible');
         }
@@ -80,11 +83,11 @@ function showTitle(element) {
   // icon.style.display = 'none';
   // content.style.display = 'flex';
   // Mostra o conteúdo e aplica a transição para o ícone
- // Aplicar transições com verificação
- if (icon && content) {
-  icon.style.opacity = '0';
-  content.style.opacity = '1';
-}
+  // Aplicar transições com verificação
+  if (icon && content) {
+    icon.style.opacity = '0';
+    content.style.opacity = '1';
+  }
 }
 
 function showIcon(element) {
@@ -102,11 +105,11 @@ function showIcon(element) {
 }
 
 /* --------------------Função para substituir as os elementos dos cards por texto---------------------- */
-function showText(element){
+function showText(element) {
   const text = element.querySelector('.card_text_elements');
-  const cardContent = element.querySelector('.card-content')
+  const cardContent = element.querySelector('.card-content');
 
-  if(text && cardContent){
+  if (text && cardContent) {
     text.style.opacity = '0';
     text.style.visibility = 'hidden';
     cardContent.style.opacity = '1';
@@ -114,15 +117,15 @@ function showText(element){
   }
 }
 
-function showContent(element){
+function showContent(element) {
   const text = element.querySelector('.card_text_elements');
-  const cardContent = element.querySelector('.card-content')
-  if(text && cardContent){
+  const cardContent = element.querySelector('.card-content');
+  if (text && cardContent) {
     text.style.opacity = '1';
     text.style.visibility = 'visible';
     cardContent.style.opacity = '0';
     cardContent.style.visibility = 'hidden';
-    }
+  }
 }
 
 /* --------------------Botão para voltar ao topo---------------------- */
@@ -251,3 +254,21 @@ const formSubmit = new FormSubmit({
   error: "<h1 class='error'>Não foi possível enviar sua mensagem.</h1>"
 });
 formSubmit.init();
+
+// LÓGICA PARA SWITCH MODE
+// const themeToggle = document.getElementById('themeToggle');
+// const rootElement = document.documentElement;
+
+// themeToggle.addEventListener('click', () => {
+//   rootElement.classList.toggle('theme-light');
+
+//   // Salva a preferência no localStorage para manter entre recarregamentos
+//   const isLightTheme = rootElement.classList.contains('theme-light');
+//   localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
+// });
+
+// // Carrega o tema salvo no localStorage
+// const savedTheme = localStorage.getItem('theme');
+// if (savedTheme === 'light') {
+//   rootElement.classList.add('theme-light');
+// }

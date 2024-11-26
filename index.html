@@ -7,12 +7,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="styles/styles.css" />
   <link rel="stylesheet" href="styles/styles-1.css" />
-  <link
-  rel="stylesheet"
-  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <script src="https://unpkg.com/aos@next/dist/aos.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"
+    src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
   <script src="js/script.js" defer></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +20,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" />
- 
+
   <title>Lucas Rones dos Anjos Oliveira</title>
 </head>
 
@@ -34,10 +32,12 @@
         <li><a class="link-menu" href="#home">Home</a></li>
         <li><a class="link-menu" href="#sobre">Sobre</a></li>
         <li><a class="link-menu" href="#hobbies">Hobbies</a></li>
+        <li><a class="link-menu" href="#formacao">Formação</a></li>
         <li><a class="link-menu" href="#skills-link">Skills</a></li>
         <li><a class="link-menu" href="#projetos-id">Projetos</a></li>
         <li><a class="link-menu" href="#fale-comigo">Contato</a></li>
       </ul>
+      <!-- <button id="theme-toggle">Alternar Tema</button> -->
     </nav>
   </header>
   <main>
@@ -116,19 +116,18 @@
         </div>
       </div>
     </section>
-    <section class="educational-background">
-      <h2>Formação acadêmica</h2>
-      <div class="swiper mySwiper">
+    <section class="educational-background" id="formacao">
+      <h2 class="scroll-fade">Formação Acadêmica</h2>
+      <div class="swiper mySwiper scroll-fade">
         <div class="swiper-wrapper">
           <div class="swiper-slide slide_1">Slide 1</div>
           <div class="swiper-slide slide_2">Slide 2</div>
           <div class="swiper-slide slide_3">Slide 3</div>
-          <div class="swiper-slide slide_4">Slide 4</div>
-          <div class="swiper-slide slide_5">Slide 5</div>
+         
         </div>
         <div class="swiper-button-next"></div>
-  <div class="swiper-button-prev"></div>
-</div>
+        <div class="swiper-button-prev"></div>
+      </div>
     </section>
     <section class="skills" id="skills-link">
 
@@ -202,7 +201,7 @@
               <img src="./img/Intagram-icon.webp" alt="instagram-image" class="image-project" />
               <h5 class="title">Instagram</h5>
               <p class="paragraph">
-                Clique abaixo para abrir a aplicação e para visualizar o deploy.
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
               </p>
             </div>
             <div class="card-content">
@@ -211,14 +210,14 @@
                 acessível.</p>
             </div>
             <a href="https://projectinstadev.netlify.app/" target="_blank" class="link">Visualizar</a>
-            <button class="button-deploy">Deploy</button>
+            <a href="https://github.com/lucasoliveiraDEV22/MPDZ-Setembro-Instagram" class="button-deploy" target="_blank">Repositório</a>
           </div>
           <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
             <div class="card_text_elements">
               <img src="./img/starbucks.png" alt="starbucks-image" class="image-project" />
               <h5>Starbucks</h5>
               <p class="paragraph">
-                Clique abaixo para abrir a aplicação e para visualizar o deploy.
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
               </p>
             </div>
             <div class="card-content">
@@ -228,15 +227,15 @@
                 escuro.
               </p>
             </div>
-            <a href="https://starcafe-website.netlify.app/" target="_blank">Visualizar</a>
-            <button class="button-deploy">Deploy</button>
+            <a href="https://starcafe-website.netlify.app/" target="_blank" class="link">Visualizar</a>
+            <a href="https://github.com/lucasoliveiraDEV22/Starbucks-MPDZ" class="button-deploy" target="_blank">Repositório</a>
           </div>
           <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
             <div class="card_text_elements">
               <img src="./img/EUA-Europe.jpg" alt="conversor-moedas-image" class="image-project" />
               <h5>Conversor de Moedas</h5>
               <p class="paragraph">
-                Clique abaixo para abrir a aplicação e para visualizar o deploy.
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
 
               </p>
             </div>
@@ -247,8 +246,8 @@
                 de reais para: dólar, euro e bitcoin.
               </p>
             </div>
-            <a href="https://currency-new-converter.netlify.app/" target="_blank">Visualizar</a>
-            <button class="button-deploy">Deploy</button>
+            <a href="https://currency-new-converter.netlify.app/" target="_blank" class="link">Visualizar</a>
+            <a href="https://github.com/lucasoliveiraDEV22/Projeto-Conversor-de-Moedas" class="button-deploy" target="_blank">Repositório</a>
           </div>
         </div>
         <div class="card-left">
@@ -257,121 +256,121 @@
               <img src="./img/thumbnail-cadastro.jpg" alt="cadastro-usuarios" class="image-project" />
               <h5>Cadastro de Usuários</h5>
               <p class="paragraph">
-                Clique abaixo para abrir a aplicação e para visualizar o deploy.
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
               </p>
             </div>
-          
-          <div class="card-content">
-            <p class="text-explanation">
-              Projeto Cadastro de Usuários - Foram utilizadas as tecnologias
+
+            <div class="card-content">
+              <p class="text-explanation">
+                Projeto Cadastro de Usuários - Foram utilizadas as tecnologias
                 ReactJS, NodeJS, além das ferramentas e frameworks: Vite,
                 React-Router-Dom 6, AXIOS e hooks useState, useRef e useEffect;
                 design do Figma.
-            </p>
+              </p>
+            </div>
+            <a href="https://cadastronovosusuarios.netlify.app/" target="_blank" class="link">Visualizar</a>
+            <a href="https://github.com/lucasoliveiraDEV22/cadastro" class="button-deploy" target="_blank">Repositório</a>
           </div>
-          <a href="https://cadastronovosusuarios.netlify.app/" target="_blank">Visualizar</a>
-          <button class="button-deploy">Deploy</button>
+          <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
+            <div class="card_text_elements">
+              <img src="./img/to-do.PNG" alt="to-do-list" class="image-project" />
+              <h5>Lista de tarefas</h5>
+              <p class="paragraph">
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
+              </p>
+            </div>
+            <div class="card-content">
+              <p class="text-explanation">
+                Projeto Lista de Tarefas: foi elaborado com o objetivo de
+                escrever uma ou mais tarefas no input "o que você vai fazer?"
+                que podemos estabelecer no dia-a-dia e, com isso podemos editar
+                e remover as tarefas assim que decidirmos removê-las.
+              </p>
+            </div>
+            <a href="https://newtasks.netlify.app/" target="_blank" class="link">Visualizar</a>
+            <a href="https://github.com/lucasoliveiraDEV22/to-do-list" class="button-deploy" target="_blank">Repositório</a>
+          </div>
+          <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
+            <div class="card_text_elements">
+              <img src="./img/tacseg.jpg" alt="" />
+              <h5>TacSeg Alarmes</h5>
+              <p class="paragraph">
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
+              </p>
+            </div>
+            <div class="card-content">
+              <p class="text-explanation">
+                Esta aplicação foi realizada para a empresa de segurança
+                eletrônica TacSeg Alarmes, na qual apresenta elementos
+                interativos como carrosseis, botões de contato com efeito e
+                formulário para contato.
+              </p>
+            </div>
+            <a href="https://tacseg.netlify.app/" target="_blank" class="link">Visualizar</a>
+            <a href="https://github.com/lucasoliveiraDEV22/Projeto-TacSeg" class="button-deploy" target="_blank">Repositório</a>
+          </div>
         </div>
-        <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
-          <div class="card_text_elements">
-            <img src="./img/to-do.PNG" alt="to-do-list" class="image-project" />
-            <h5>Lista de tarefas</h5>
-            <p class="paragraph">
-              Clique abaixo para abrir a aplicação e para visualizar o deploy.
-            </p>
+        <div class="card-right">
+          <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
+            <div class="card_text_elements">
+              <img src="./img/actual-printer.PNG" alt="" />
+              <h5 class="title">Actual Printer</h5>
+              <p class="paragraph">
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
+              </p>
+            </div>
+            <div class="card-content">
+              <p class="text-explanation">
+                Projeto elaborado para a empresa de papelaria Actual Printer, na
+                qual havia a demanda para construção de um website para seus
+                clientes entrarem em contato com os responsáveis. Esta aplicação
+                foi elaborada com ReactJS, material UI e Google Key API.
+              </p>
+            </div>
+            <a href="https://www.actualprinter.com.br/" target="_blank" class="link">Visualizar</a>
+            <a href="https://github.com/lucasoliveiraDEV22/Actual-Printer" class="button-deploy" target="_blank">Repositório</a>
           </div>
-          <div class="card-content">
-            <p class="text-explanation">
-              Projeto Lista de Tarefas: foi elaborado com o objetivo de
-              escrever uma ou mais tarefas no input "o que você vai fazer?"
-              que podemos estabelecer no dia-a-dia e, com isso podemos editar
-              e remover as tarefas assim que decidirmos removê-las.
-            </p>
+          <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
+            <div class="card_text_elements">
+              <img src="./img/thumbnail alura.PNG" alt="" />
+              <h5>Encriptador</h5>
+              <p class="paragraph">
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
+              </p>
+            </div>
+            <div class="card-content">
+              <p class="text-explanation">
+                O objetivo desta aplicação é criptografar uma palavra em que
+                seja possível escrever no campo de texto da esquerda e, após
+                isso, que eu consiga copiar a palavra criptografa e
+                descriptografá-la novamente. Ex:"gato" => "gaitober" e
+                "gaitober" => "gato".
+              </p>
+            </div>
+            <a href="https://projeto-decodificador-theta.vercel.app/" target="_blank" class="link">Visualizar</a>
+            <a href=https://github.com/lucasoliveiraDEV22/Projeto-decodificador" class="button-deploy" target="_blank">Repositório</a>
           </div>
-          <a href="https://newtasks.netlify.app/" target="_blank">Visualizar</a>
-          <button class="button-deploy">Deploy</button>
+          <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
+            <div class="card_text_elements">
+              <img src="./img/fit-project.PNG" alt="" />
+              <h5>Fit-Project</h5>
+              <p class="paragraph">
+                Clique abaixo para abrir a aplicação e para abrir o repositório.
+              </p>
+            </div>
+            <div class="card-content">
+              <p class="text-explanation">
+                A "Fit-Project" é um website interativo em UX (experiência do
+                usuário), e nada mais é do que uma página de
+                cafeteria/restaurante fitness para que as pessoas consigam
+                acessar e visualizar os produtos e consigam entrar em contato
+                também.
+              </p>
+            </div>
+            <a href="https://devlucas.hatch.one/fit-projetc" target="_blank" class="link">Visualizar</a>
+            <a href="https://devlucas.hatch.one/fit-projetc" class="button-deploy" target="_blank">Repositório</a>
+          </div>
         </div>
-        <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
-          <div class="card_text_elements">
-            <img src="./img/tacseg.jpg" alt="" />
-            <h5>TacSeg Alarmes</h5>
-            <p class="paragraph">
-              Clique abaixo para abrir a aplicação e para visualizar o deploy.
-            </p>
-          </div>
-          <div class="card-content">
-            <p class="text-explanation">
-              Esta aplicação foi realizada para a empresa de segurança
-              eletrônica TacSeg Alarmes, na qual apresenta elementos
-              interativos como carrosseis, botões de contato com efeito e
-              formulário para contato.
-            </p>
-          </div>
-          <a href="https://tacseg.netlify.app/" target="_blank">Visualizar</a>
-          <button class="button-deploy">Deploy</button>
-        </div>
-      </div>
-      <div class="card-right">
-        <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
-          <div class="card_text_elements">
-            <img src="./img/actual-printer.PNG" alt="" />
-            <h5 class="title">Actual Printer</h5>
-            <p class="paragraph">
-              Clique abaixo para abrir a aplicação e para visualizar o deploy.
-            </p>
-          </div>
-          <div class="card-content">
-            <p class="text-explanation">
-              Projeto elaborado para a empresa de papelaria Actual Printer, na
-              qual havia a demanda para construção de um website para seus
-              clientes entrarem em contato com os responsáveis. Esta aplicação
-              foi elaborada com ReactJS, material UI e Google Key API.
-            </p>
-          </div>
-          <a href="https://www.actualprinter.com.br/" target="_blank" class="link">Visualizar</a>
-          <button class="button-deploy">Deploy</button>
-        </div>
-        <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
-          <div class="card_text_elements">
-            <img src="./img/thumbnail alura.PNG" alt="" />
-            <h5>Encriptador</h5>
-            <p class="paragraph">
-              Clique abaixo para abrir a aplicação e para visualizar o deploy.
-            </p>
-          </div>
-          <div class="card-content">
-            <p class="text-explanation">
-              O objetivo desta aplicação é criptografar uma palavra em que
-              seja possível escrever no campo de texto da esquerda e, após
-              isso, que eu consiga copiar a palavra criptografa e
-              descriptografá-la novamente. Ex:"gato" => "gaitober" e
-              "gaitober" => "gato".
-            </p>
-          </div>
-          <a href="https://projeto-decodificador-theta.vercel.app/" target="_blank">Visualizar</a>
-          <button class="button-deploy">Deploy</button>
-        </div>
-        <div class="card" onmousemove="showText(this)" onmouseout="showContent(this)">
-          <div class="card_text_elements">
-            <img src="./img/fit-project.PNG" alt="" />
-            <h5>Fit-Project</h5>
-            <p class="paragraph">
-              Clique abaixo para abrir a aplicação e para visualizar o deploy.
-            </p>
-          </div>
-          <div class="card-content">
-            <p class="text-explanation">
-              A "Fit-Project" é um website interativo em UX (experiência do
-              usuário), e nada mais é do que uma página de
-              cafeteria/restaurante fitness para que as pessoas consigam
-              acessar e visualizar os produtos e consigam entrar em contato
-              também.
-            </p>
-          </div>
-          <a href="https://devlucas.hatch.one/fit-projetc" target="_blank">Visualizar</a>
-          <button class="button-deploy">Deploy</button>
-        </div>
-      </div>
     </section>
   </main>
   <footer id="fale-comigo">
