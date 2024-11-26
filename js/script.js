@@ -256,19 +256,20 @@ const formSubmit = new FormSubmit({
 formSubmit.init();
 
 // LÓGICA PARA SWITCH MODE
-// const themeToggle = document.getElementById('themeToggle');
-// const rootElement = document.documentElement;
+const themeToggleButton = document.getElementById('theme-toggle');
+const body = document.body;
 
-// themeToggle.addEventListener('click', () => {
-//   rootElement.classList.toggle('theme-light');
+themeToggle.addEventListener('click', () => {
+  console.log("Botão clicado!");
+  if(body.classList.contains('theme-dark')){
+    console.log("Mudando para theme-light");
+    body.classList.remove('theme-dark');
+    body.classList.add('theme-light');
+  } else {
+    console.log("Mudando para theme-dark");
+    body.classList.remove('theme-light');
+    body.classList.add('theme-dark');
+  }
+});
 
-//   // Salva a preferência no localStorage para manter entre recarregamentos
-//   const isLightTheme = rootElement.classList.contains('theme-light');
-//   localStorage.setItem('theme', isLightTheme ? 'light' : 'dark');
-// });
 
-// // Carrega o tema salvo no localStorage
-// const savedTheme = localStorage.getItem('theme');
-// if (savedTheme === 'light') {
-//   rootElement.classList.add('theme-light');
-// }
