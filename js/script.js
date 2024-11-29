@@ -1,3 +1,6 @@
+/*LÓGICA DO TOGGLE MODE */
+
+
 /* Lógica do Swiper */
 
 let swiper = new Swiper('.mySwiper', {
@@ -255,21 +258,6 @@ const formSubmit = new FormSubmit({
 });
 formSubmit.init();
 
-// LÓGICA PARA SWITCH MODE
-const themeToggleButton = document.getElementById('theme-toggle');
-const body = document.body;
 
-themeToggle.addEventListener('click', () => {
-  console.log("Botão clicado!");
-  if(body.classList.contains('theme-dark')){
-    console.log("Mudando para theme-light");
-    body.classList.remove('theme-dark');
-    body.classList.add('theme-light');
-  } else {
-    console.log("Mudando para theme-dark");
-    body.classList.remove('theme-light');
-    body.classList.add('theme-dark');
-  }
-});
 
 
