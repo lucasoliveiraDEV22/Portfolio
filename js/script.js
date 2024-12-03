@@ -1,5 +1,25 @@
 /*LÓGICA DO TOGGLE MODE */
+document.addEventListener('DOMContentLoaded',()=>{
+  const checkbox = document.querySelector('.checkbox');
+  const rootElement = document.documentElement;
 
+  // Carregar o tema salvo no localStorage
+  const savedTheme = localStorage.getItem('theme') || 'dark'; // Padrão é 'dark'
+  if(savedTheme === 'light'){
+    rootElement.classList.add('theme-light');
+    checkbox.checked = true;
+  }
+
+  checkbox.addEventListener('change', () => {
+    if (checkbox.checked) {
+      rootElement.classList.add('theme-light');
+      localStorage.setItem('theme', 'light'); // Salvar tema
+    } else {
+      rootElement.classList.remove('theme-light');
+      localStorage.setItem('theme', 'dark'); // Salvar tema
+    }
+  });
+})
 
 /* Lógica do Swiper */
 
