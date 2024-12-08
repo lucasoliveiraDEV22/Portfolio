@@ -41,7 +41,7 @@ html {
   --primary-color: #d50909;
   --main-white-color: #000;
   --main-card-color: #4a0808;
-  --main-nav-hover: #0078d4;
+  --main-nav-hover: #fcec13;
   --main-home-background: #22211d;
   --background-card: #220305;
   --text-shadow: #d40707;
@@ -83,38 +83,59 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
   gap: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  padding-top: 10px;
+  padding: 10px 30px;
   width: 100%;
 }
 
+/* Menu padrão */
+#menu-list {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+
+
+.link-menu {
+  text-decoration: none;
+  color: var(--main-white-color);
+  font-size: 24px;
+}
+
+.link-menu:hover {
+  color: var(--main-nav-hover);
+}
+
 .checkbox {
-  height: 60px;
-  width: 110px;
+  height: 30px;
+  width: 60px;
+  border: 2px solid var(--main-white-color);
   background: #222;
   appearance: none;
-  border-radius: 160px;
+  border-radius: 30px;
   box-shadow: inset 0 8px 60px rgba(0, 0, 0, 0.1),
     inset 0 8px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.1);
   position: relative;
   outline: none;
   cursor: pointer;
-  transition: 0.5s;
+ 
   margin: 10px;
+  display: block; /* Mantém o checkbox visível */
 }
 
 .checkbox::before {
-  height: 60px;
-  width: 60px;
+  height: 24px;
+  width: 24px;
   position: absolute;
-  top: 0;
-  left: 0;
+  display: block;
+  top: 50%; /* Alinha verticalmente */
+  left: 3px; /* Alinha horizontalmente dentro do checkbox */
   content: '';
   background: linear-gradient(to bottom, #444, #ffffff);
-  border-radius: 60px;
-  transform: scale(1);
+  border-radius: 50%;
+  transform: translateY(-50%);/* Corrige o centro vertical */
   transition: 0.5s;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
     inset 4px 4px rgba(255, 255, 255, 0.2),
@@ -127,12 +148,32 @@ nav {
     inset 0 2px 8px rgba(0, 0, 0, 0.1), inset 0 -4px 4px rgba(0, 0, 0, 0.05);
 }
 
+/* Estilo ao clicar no checkbox */
+
 .checkbox:checked::before {
-  left: 60px;
+  left: 32px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1),
     inset 4px 4px rgba(255, 255, 255, 1), inset -4px 4px rgba(255, 255, 255, 1);
   background: linear-gradient(to bottom, #eaeaea, #f9f9f9);
+  transform: translateX(28px, -60%); /* Movimenta o "botão" ao estado marcado */
 }
+
+/* Ícone do menu hamburguer */
+.hamburger {
+  display: none; /* Esconde em telas grandes */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  width: 30px;
+  height: 3px;
+  background-color: var(--main-white-color);
+  transition: 0.3s;
+}
+
 
 .portfolio {
   color: var(--main-white-color);
@@ -141,7 +182,7 @@ nav {
 }
 
 .portfolio span {
-  color: #bf2f2f;
+  color: var(--primary-color);
 }
 
 li {
@@ -161,6 +202,10 @@ li:hover {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 10px;
   transform: none;
   position: fixed;
   top: 0;
@@ -169,16 +214,7 @@ header {
   background-color: var(--background-1);
 }
 
-.link-menu {
-  text-decoration: none;
-  color: var(--main-white-color);
-  font-size: 24px;
-}
 
-.link-menu:hover {
-  color: #fcec13;
-  transition: 0.5s;
-}
 
 .meu_nome {
   display: flex;
@@ -193,11 +229,12 @@ header {
   background-position: contain;
   background-attachment: fixed;
   box-shadow: inset 5px 5px 15px #f0f0af;
+  padding: 20px;
 }
 
 .meu_nome h3 {
   color: var(--main-white-color);
-  font-size: 40px;
+  font-size: 2rem;
 }
 
 .class_home {
@@ -219,9 +256,6 @@ header {
 .class_home::before,
 .class_home::after {
   content: '';
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
   top: 0;
   left: 0;
   position: absolute;
@@ -259,7 +293,7 @@ header {
 
 #first_title {
   color: var(--font-first-section);
-  font-size: 70px;
+  font-size: 3.5rem;
   text-align: center;
 }
 
@@ -270,6 +304,7 @@ header {
 .about {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 60px 15%;
   background-color: var(--background-1);
 }
@@ -402,7 +437,8 @@ header {
 
 .swiper {
   width: 100%;
-  height: 60vh;
+  height: 45vh;
+  margin: 0 auto; /* Centraliza o carrossel */
 }
 
 .swiper-slide {
@@ -412,9 +448,10 @@ header {
   align-items: center;
   justify-content: center;
   height: 100%; /* Garante que o slide ocupe a altura total do carrossel */
-  font-size: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
   color: rgb(243, 5, 5);
-  text-shadow: 3px 10px 7px rgb(211, 210, 210);
+  text-shadow: 3px 7px 12px rgb(145, 84, 84);
 }
 
 .swiper-slide img {
@@ -457,8 +494,8 @@ div.swiper-button-prev:hover {
   transition: 1s;
 }
 
-.skills{
-  background-color: var(--background-1)
+.skills {
+  background-color: var(--background-1);
 }
 
 .skills h2 {
@@ -466,7 +503,6 @@ div.swiper-button-prev:hover {
   text-align: center;
   color: var(--main-white-color);
   font-size: 75px;
-  
 }
 
 .skill-cards {
@@ -474,7 +510,7 @@ div.swiper-button-prev:hover {
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1.2rem;
   grid-row-gap: 1.2rem;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
 }
 
 .skill-figure {
@@ -824,6 +860,7 @@ footer {
 footer h5 {
   color: var(--main-white-color);
   font-size: 35px;
+  text-shadow: 3px 7px 12px var(--primary-color);
 }
 
 footer p {
@@ -831,6 +868,7 @@ footer p {
   margin-top: 14px;
   color: var(--main-white-color);
   font-size: 22px;
+  text-shadow: 3px 7px 12px var(--primary-color);
 }
 
 .social {
@@ -880,143 +918,4 @@ footer p {
   background-color: #1f8017; /* Muda a cor de fundo ao passar o mouse */
 }
 
-@media screen and (max-width: 720px) {
-  body {
-    width: 100%;
-    height: 100%;
-  }
 
-  .caixa-principal {
-    background-size: 510px;
-    background-position: left;
-    padding-bottom: 20px;
-  }
-
-  nav {
-    padding-left: 15px;
-    padding-right: 20px;
-    padding-top: 10px;
-  }
-
-  .portfolio {
-    font-size: 35px;
-  }
-
-  ul {
-    margin-left: 60px;
-    justify-content: space-between;
-  }
-
-  li {
-    margin: 18px;
-  }
-
-  .link-menu {
-    font-size: 18px;
-  }
-
-  .meu-nome {
-    top: 75%;
-  }
-
-  h1 {
-    font-size: 50px;
-  }
-
-  .meu-nome h3 {
-    font-size: 30px;
-  }
-
-  section {
-    display: block;
-    padding: 45px 10%;
-  }
-
-  #Lucas-image {
-    width: 260px;
-    height: 270px;
-    margin-left: 10%;
-  }
-
-  section div h2 {
-    font-size: 43px;
-  }
-
-  section div p {
-    font-size: 18px;
-  }
-
-  section div button {
-    height: 50px;
-    width: 170px;
-    font-size: 19px;
-    border-radius: 60px;
-  }
-
-  .Projetos {
-    padding-top: 30px;
-    padding-bottom: 96px;
-  }
-
-  .card {
-    width: 150px;
-    height: 239px;
-    padding: 15px 16px;
-  }
-
-  .Projetos h2 {
-    font-size: 35px;
-  }
-
-  .card img {
-    height: 27px;
-  }
-
-  .card h5 {
-    font-size: 13px;
-  }
-
-  .card p {
-    margin-top: 8px;
-    font-size: 10px;
-    margin-bottom: 11px;
-  }
-
-  .card a {
-    font-size: 8px;
-    border-radius: 27px;
-  }
-
-  .card-projects {
-    gap: 15px;
-    justify-content: center;
-  }
-
-  footer {
-    padding-top: 90px;
-  }
-
-  footer h5 {
-    font-size: 25px;
-  }
-
-  footer p {
-    margin-bottom: 20px;
-    margin-top: 11px;
-    font-size: 19px;
-  }
-
-  .social {
-    gap: 15px;
-  }
-
-  .social img {
-    height: 20px;
-  }
-
-  .social a {
-    border-radius: 47%;
-    height: 45px;
-    width: 45px;
-  }
-}

@@ -3,6 +3,15 @@ document.addEventListener('DOMContentLoaded',()=>{
   const checkbox = document.querySelector('.checkbox');
   const rootElement = document.documentElement;
 
+  // Seleciona o botão do menu hamburguer e o menu
+const hamburgerBtn = document.getElementById("hamburger-btn");
+const menuList = document.getElementById("menu-list");
+
+// Adiciona funcionalidade ao clique no menu hamburguer
+hamburgerBtn.addEventListener("click", () => {
+  menuList.classList.toggle("show-menu");
+});
+
   // Carregar o tema salvo no localStorage
   const savedTheme = localStorage.getItem('theme') || 'dark'; // Padrão é 'dark'
   if(savedTheme === 'light'){
