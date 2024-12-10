@@ -172,7 +172,7 @@ nav {
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-* Classe ativada quando o menu está aberto */
+/* Classe ativada quando o menu está aberto */
 .hamburger.active span:nth-child(1) {
   transform: translateY(8px) rotate(45deg);
 }
