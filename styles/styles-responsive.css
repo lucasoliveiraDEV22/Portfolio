@@ -1,5 +1,9 @@
 /* Menu hambúrguer (mobile e tablet) */
 @media (max-width: 1024px) {
+  header {
+    max-width: 100vw;
+    padding: 10px;
+  }
   .hamburger {
     display: flex; /* Mostra o botão hambúrguer */
     justify-content: center;
@@ -108,43 +112,41 @@
   .skill-cards {
     grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
   }
- 
-    .Projetos h2 {
-      font-size: 50px; /* Reduz o tamanho do título */
-    }
-  
-    .card-projects {
-      flex-direction: column; /* Alinha os cards verticalmente */
-      align-items: center;
-      gap: 1.5rem;
-    }
-  
-    .card-right,
-    .card-left {
-      flex-direction: column;
-     
-    }
-  
-    .card {
-      width: 300px; /* Reduz a largura dos cards */
-      height: 380px;
-      margin: 10px;
-    }
-  
-    .card img {
-      width: 50px;
-      height: 50px;
-    }
-  
-    .paragraph,
-    .text-explanation {
-      font-size: 0.75rem; /* Ajusta o tamanho da fonte */
-    }
-  
-    .link {
-      top: 30%; /* Reposiciona o botão */
-    }
 
+  .Projetos h2 {
+    font-size: 50px; /* Reduz o tamanho do título */
+  }
+
+  .card-projects {
+    flex-direction: column; /* Alinha os cards verticalmente */
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .card-right,
+  .card-left {
+    flex-direction: column;
+  }
+
+  .card {
+    width: 300px; /* Reduz a largura dos cards */
+    height: 380px;
+    margin: 10px;
+  }
+
+  .card img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .paragraph,
+  .text-explanation {
+    font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+  }
+
+  .link {
+    top: 30%; /* Reposiciona o botão */
+  }
 }
 
 /* Ajustes para dispositivos móveis */
@@ -259,7 +261,10 @@
   .skill-cards {
     display: grid !important;
     /* Pelo menos 200px por card, até preencher o espaço */
-    grid-template-columns: repeat(2, 1fr) !important; /* Flexível para 2 colunas */
+    grid-template-columns: repeat(
+      2,
+      1fr
+    ) !important; /* Flexível para 2 colunas */
     gap: 0.8rem !important; /* Espaçamento entre os cards */
     margin: 1rem auto;
     justify-content: center; /* Centraliza os cards */
@@ -349,18 +354,16 @@
   }
 
   .form-container input,
-.form-container textarea,
-.form-container button{
-  padding: 0.4rem;
-  margin: 0.5rem 0;
-}
+  .form-container textarea,
+  .form-container button {
+    padding: 0.4rem;
+    margin: 0.5rem 0;
+  }
 
   #form-contact {
     max-width: 200px;
     max-height: 200px;
   }
-
-
 }
 
 @media (max-width: 480px) {
