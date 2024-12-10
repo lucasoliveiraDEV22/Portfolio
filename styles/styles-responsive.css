@@ -2,6 +2,7 @@
 @media (max-width: 1024px) {
   .hamburger {
     display: flex; /* Mostra o botão hambúrguer */
+    position: fixed;
   }
 
   #menu-list {
