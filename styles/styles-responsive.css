@@ -2,7 +2,8 @@
 @media (max-width: 1024px) {
   .hamburger {
     display: flex; /* Mostra o botão hambúrguer */
-    position: fixed;
+    justify-content: center;
+    align-items: center;
   }
 
   #menu-list {
@@ -169,7 +170,7 @@
   }
 
   .link-menu {
-    font-size: 20px;
+    font-size: 16px;
   }
   .class_home {
     width: 80%;
