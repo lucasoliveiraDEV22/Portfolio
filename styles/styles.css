@@ -96,8 +96,6 @@ nav {
   list-style: none;
 }
 
-
-
 .link-menu {
   text-decoration: none;
   color: var(--main-white-color);
@@ -120,7 +118,7 @@ nav {
   position: relative;
   outline: none;
   cursor: pointer;
- 
+
   margin: 10px;
   display: block; /* Mantém o checkbox visível */
 }
@@ -135,7 +133,7 @@ nav {
   content: '';
   background: linear-gradient(to bottom, #444, #ffffff);
   border-radius: 50%;
-  transform: translateY(-50%);/* Corrige o centro vertical */
+  transform: translateY(-50%); /* Corrige o centro vertical */
   transition: 0.5s;
   box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5),
     inset 4px 4px rgba(255, 255, 255, 0.2),
@@ -171,9 +169,21 @@ nav {
   width: 30px;
   height: 3px;
   background-color: var(--main-white-color);
-  transition: 0.3s;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+* Classe ativada quando o menu está aberto */
+.hamburger.active span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0; /* Oculta a barra do meio */
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
 
 .portfolio {
   color: var(--main-white-color);
@@ -213,8 +223,6 @@ header {
   z-index: 1000; /* Garantir que o header fique acima do conteúdo */
   background-color: var(--background-1);
 }
-
-
 
 .meu_nome {
   display: flex;
@@ -507,6 +515,9 @@ div.swiper-button-prev:hover {
 
 .skill-cards {
   display: grid;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem; /* Espaçamento entre os cards */
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: 1.2rem;
   grid-row-gap: 1.2rem;
@@ -644,10 +655,11 @@ div.swiper-button-prev:hover {
   height: 400px;
   width: 340px;
   border-radius: 20px;
-  padding: 3px 0;
+  padding: 1rem;
+  margin: 8px;
   text-align: center;
   box-shadow: 8px 12px 30px 0px var(--primary-color);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease;
   border: 2px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -707,12 +719,15 @@ div.swiper-button-prev:hover {
 }
 
 .card img {
-  height: 3rem;
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  margin-bottom: 12px;
 }
 
 .card h5 {
   color: white;
-  font-size: 2rem;
+  font-size: 1.6rem;
 }
 
 .paragraph {
@@ -791,7 +806,7 @@ div.swiper-button-prev:hover {
 .form-container {
   display: flex;
   flex-direction: column;
-  max-width: 800px;
+  max-width: 100%;
   margin: 0 auto;
   padding: 1rem;
   background-color: #3d0508;
@@ -837,13 +852,16 @@ div.swiper-button-prev:hover {
 
 .form-image {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 2.5rem;
+  text-align: center;
+  gap: 1.5rem;
 }
 
 #form-contact {
-  max-width: 280px;
-  max-height: 280px;
+  max-width: 100%;
+  max-height: 100%;
+  width: 300px;
   border-radius: 2%;
 }
 
@@ -851,6 +869,7 @@ footer {
   background-color: var(--background-1);
   padding-top: 100px;
   padding-bottom: 120px;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -859,7 +878,7 @@ footer {
 
 footer h5 {
   color: var(--main-white-color);
-  font-size: 35px;
+  font-size: 28px;
   text-shadow: 3px 7px 12px var(--primary-color);
 }
 
@@ -867,13 +886,15 @@ footer p {
   margin-bottom: 25px;
   margin-top: 14px;
   color: var(--main-white-color);
-  font-size: 22px;
+  font-size: 18px;
   text-shadow: 3px 7px 12px var(--primary-color);
 }
 
 .social {
   display: flex;
-  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 
 .social img {
@@ -917,5 +938,3 @@ footer p {
 #backToTop:hover {
   background-color: #1f8017; /* Muda a cor de fundo ao passar o mouse */
 }
-
-

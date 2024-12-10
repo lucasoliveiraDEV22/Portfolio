@@ -106,17 +106,63 @@
   .skill-cards {
     grid-template-columns: repeat(2, 1fr); /* 2 colunas em tablets */
   }
-  .card {
-    width: 280px; /* Reduz o tamanho do card */
-    height: 350px; /* Reduz a altura */
-  }
-  .card-projects {
-    gap: 1.5rem; /* Reduz o espaço entre os cards */
-  }
+ 
+    .Projetos h2 {
+      font-size: 50px; /* Reduz o tamanho do título */
+    }
+  
+    .card-projects {
+      flex-direction: column; /* Alinha os cards verticalmente */
+      align-items: center;
+      gap: 1.5rem;
+    }
+  
+    .card-right,
+    .card-left {
+      flex-direction: column;
+     
+    }
+  
+    .card {
+      width: 300px; /* Reduz a largura dos cards */
+      height: 380px;
+      margin: 10px;
+    }
+  
+    .card img {
+      width: 50px;
+      height: 50px;
+    }
+  
+    .paragraph,
+    .text-explanation {
+      font-size: 0.75rem; /* Ajusta o tamanho da fonte */
+    }
+  
+    .link {
+      top: 30%; /* Reposiciona o botão */
+    }
+
 }
 
 /* Ajustes para dispositivos móveis */
 @media (max-width: 768px) {
+  .checkbox {
+    width: 40px;
+    height: 20px;
+    border-radius: 20px; /* Mais arredondado */
+    margin: 5px; /* Espaço reduzido */
+  }
+
+  .checkbox::before {
+    width: 50px;
+    height: 15px;
+    left: 10px;
+  }
+
+  .checkbox:checked::before {
+    left: calc(100% - 18px); /* Ajuste automático para a direita */
+  }
   .portfolio {
     font-size: 36px;
   }
@@ -202,62 +248,135 @@
   }
 
   .swiper {
-    height: 40vh;
+    height: 35vh;
   }
   .swiper-slide {
-    font-size: 1.2rem; /* Tamanho ainda menor em celulares */
-    padding: 1.5rem;
+    font-size: 1.8rem; /* Tamanho ainda menor em celulares */
   }
 
   .skill-cards {
-    display: grid;
+    display: grid !important;
     /* Pelo menos 200px por card, até preencher o espaço */
-    grid-template-columns: repeat(2, 1fr); /* Garante 2 colunas no mínimo */
-    gap: 0.8rem;
-    margin: 0.5rem auto;
-    justify-content: center; /* Centraliza os cards horizontalmente */
+    grid-template-columns: repeat(2, 1fr) !important; /* Flexível para 2 colunas */
+    gap: 0.8rem !important; /* Espaçamento entre os cards */
+    margin: 1rem auto;
+    justify-content: center; /* Centraliza os cards */
   }
 
   .skill-figure {
-    width: 6rem; /* Reduz a largura dos cards */
-    height: 6rem; /* Reduz a altura dos cards */
+    width: 8rem; /* Ajuste para um tamanho mais visível */
+    height: 8rem; /* Proporcional */
+    font-size: 0.8rem; /* Ajusta o tamanho dos textos */
   }
   .skill-content h3 {
-    font-size: 1rem; /* Reduz tamanho do título */
+    margin: 0; /* Remove margens padrão */
+    text-align: center; /* Centraliza o texto */
+    font-size: 1rem; /* Ajusta o título */
   }
 
   .skill-content p {
-    font-size: 0.6rem; /* Reduz tamanho do parágrafo */
+    margin: 0; /* Remove margens padrão */
+    text-align: center; /* Centraliza o texto */
+    font-size: 0.8rem; /* Ajusta o parágrafo */
   }
 
   .icon {
-    font-size: 2rem; /* Reduz tamanho do ícone */
+    font-size: 2rem; /* Ícones menores, mas visíveis */
+  }
+  .card-projects {
+    flex-direction: row;
+    justify-content: center;
   }
 
   .card {
-    width: 230px; /* Cards ainda menores */
-    height: 320px;
+    max-width: 45%; /* Ocupa quase metade do container */
   }
+  .Projetos {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .Projetos h2 {
+    font-size: 35px; /* Reduz ainda mais o título */
+    margin-bottom: 1rem;
+  }
+
   .card-projects {
-    gap: 1rem; /* Reduz o espaço entre os cards */
+    margin-top: 2rem;
   }
+
+  .card {
+    width: 100%; /* Ocupa quase toda a largura */
+    height: auto;
+    padding: 1rem;
+  }
+
+  .card img {
+    width: 40px; /* Ajusta tamanho da imagem */
+    height: 40px;
+  }
+
+  .card h5 {
+    font-size: 1.2rem;
+  }
+
+  .paragraph,
+  .text-explanation {
+    font-size: 0.7rem; /* Texto menor para caber em telas pequenas */
+    margin: 0.5rem 0;
+  }
+
+  .link {
+    font-size: 13px;
+    top: 25%;
+    padding: 4px 12px;
+  }
+  .form-container {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  .form-image {
+    flex-direction: column;
+    text-align: left;
+  }
+  .form-container label {
+    font-size: 0.4rem; /* Reduz o tamanho para tablets */
+  }
+
+  .form-container input,
+.form-container textarea,
+.form-container button{
+  padding: 0.4rem;
+  margin: 0.5rem 0;
+}
+
+  #form-contact {
+    max-width: 200px;
+    max-height: 200px;
+  }
+
+
 }
 
 @media (max-width: 480px) {
   .checkbox {
+    width: 35px;
     height: 15px;
-    width: 60px;
-    border-radius: 20px;
-    margin: 2px;
+    border-radius: 20px; /* Mantém proporção de borda */
+    margin: 3px; /* Menor espaço */
   }
 
   .checkbox::before {
-    height: 10px;
-    width: 10px;
-    left: 0.1px;
+    width: 12px;
+    height: 12px;
+    left: 2px;
   }
-  .checkbox:checked::before{
-    left: 18px;
+
+  .checkbox:checked::before {
+    left: calc(100% - 14px); /* Ajuste automático */
   }
   .swiper-slide {
     font-size: 1.2rem; /* Tamanho ainda menor em celulares */
@@ -286,11 +405,41 @@
     font-size: 2rem; /* Ícones menores */
   }
   .card-projects {
-    flex-direction: column; /* Cards em uma única coluna */
-    align-items: center; /* Centraliza os cards */
+    flex-direction: column;
+    align-items: center;
   }
+
   .card {
-    width: 90%; /* Cards ocupam quase toda a largura da tela */
-    height: 300px;
+    max-width: 90%; /* Largura quase total em telas pequenas */
+  }
+
+  .Projetos h2 {
+    font-size: 2rem; /* Reduz tamanho do título */
+  }
+  footer h5 {
+    font-size: 24px;
+  }
+
+  footer p {
+    font-size: 16px;
+  }
+
+  .social img {
+    height: 20px;
+  }
+
+  .social a {
+    height: 40px;
+    width: 40px;
+  }
+
+  .form-container input,
+  .form-container textarea,
+  .form-container button {
+    font-size: 14px;
+    padding: 0.6rem;
+  }
+  .form-container label {
+    font-size: 0.9rem; /* Reduz o tamanho para tablets */
   }
 }

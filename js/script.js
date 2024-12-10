@@ -10,6 +10,7 @@ const menuList = document.getElementById("menu-list");
 // Adiciona funcionalidade ao clique no menu hamburguer
 hamburgerBtn.addEventListener("click", () => {
   menuList.classList.toggle("show-menu");
+  hamburgerBtn.classList.toggle("active"); // Ativa o efeito do ícone
 });
 
   // Carregar o tema salvo no localStorage
